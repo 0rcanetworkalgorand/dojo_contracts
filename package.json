@@ -1,0 +1,25 @@
+{
+  "name": "dojo-contracts-deployment",
+  "version": "1.0.0",
+  "description": "0rca Swarm Dojo - Smart Contract Deployment with Pera Wallet",
+  "main": "deploy.ts",
+  "scripts": {
+    "deploy": "ts-node deploy_testnet_final.ts",
+    "build": "tsc",
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": ["algorand", "smart-contracts", "pera-wallet", "walletconnect"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@walletconnect/sign-client": "^2.16.1",
+    "@walletconnect/qrcode-modal": "^1.8.0",
+    "algosdk": "^3.5.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}

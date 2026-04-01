@@ -1,0 +1,7140 @@
+{
+  "version": 3,
+  "sources": [
+    "../contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAIA;;AAAA;AAAA;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;AAAA;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;AAQK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAGG;;;;;;;AAAA;;AAAA;AACA;AAAA;AAAA;AACA;AAA0B;AAA1B;AALH;AAAA;AAOA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAQU;;AAAA;;AAAA;AAAP;AACA;;AAAA;AACO;AAAqB;;AAArB;AAAP;AAGO;AAAA;;AAA8B;;AAA9B;AAAP;AACO;;AAAgC;AAAA;AAAA;AAAA;AAAhC;AAAP;AAGQ;AACC;AAAjB;AAAA;;AAAA;AAAA;;;AACqB;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAT;;AAAA;AAAA;;AADK;AAAA;;;;;;AAGF;;AAAA;;AAAA;;AAAA;AAAP;AAGS;;;AAAjB;AAAA;;AAAA;AAAA;;;AACY;AACqB;AAAA;AAAA;AAAA;AACF;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AACF;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;;;;;;;AAHjB;;;;AAAA;;;AAAA;AADK;AAAA;;;;;;AAOT;AAAA;AAAA;AAAA;AAA2B;AAA3B;AAAA;AAAA;AAAA;AA/BH;AAAA;AAAA;AAAA;AAkCA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAOG;;AAAA;AACO;;AAAqB;;AAArB;AAAP;AAEO;AAAA;;AAA8B;;AAA9B;AAAP;AACO;AAAA;;AAAgC;AAAA;AAAA;AAAA;AAAhC;AAAP;AAEe;;AACC;AAAA;;AAAA;AAAA;;AACJ;AAAA;AAGH;AAAjB;AAAA;;AAAA;AAAA;;;AAGA;AAAA;;;;;AAGY;AACqB;AAAA;AAAA;AAAA;AACF;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;;;;;;;AAFnB;;;;AAAA;;;AAAA;AANK;AAAA;;;;;;AAID;;AAAA;;AAAA;;;;AAQR;AAAA;AAAA;AAAA;AAA2B;AAA3B;AAAA;AAAA;AAAA;AA9BH;AAAA;AAAA;AAAA;;;;AAiCA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAQU;;AAAA;;AAAA;AAAP;AACA;;AAAA;AACO;AAAqB;;AAArB;AAAP;AAEO;AAAA;;AAA8B;;AAA9B;AAAP;AACO;;AAAgC;AAAA;AAAA;AAAA;AAAhC;AAAP;AAGmB;AACV;AAAjB;AAAA;;AAAA;AAAA;;;AACgC;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAApB;;AAAA;AAAA;;AADK;AAAA;;;;;;AAEF;;AAAoB;;;AAApB;AAAP;AAEe;;AAAA;;AAAA;;AACD;AAAd;;AAGS;;;AAAjB;AAAA;;AAAA;AAAA;;;AACoB;;AAAoB;AAApB;AAAL;;AAAA;AAAf;;;AAEyB;;AAAA;;AAAA;AAKb;AACqB;AAAA;AAAA;AAAA;AACF;;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;;;;;;;;AAFnB;;;;AAAA;;;AAAA;AARK;AAAA;;;;;;AAKwB;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;AAAf;;AAAA;AAAyC;;;AAA1C;AAAA;AACT;;AAAA;AAAA;;;;;AAQR;AAAA;AAAA;AAAA;AAA2B;AAA3B;AAAA;AAAA;AAAA;AAvCH;AAAA;AAAA;AAAA;AA6CqB;AAAA;AAAA;AAAA;AAAX;AAHV;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "algopy.arc4.ARC4Contract.approval_program",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1 32 8"
+    },
+    "7": {
+      "op": "bytecblock \"total_splits\" \"usdc_asset_id\" 0x151f7c7580"
+    },
+    "42": {
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "44": {
+      "op": "!",
+      "defined_out": [
+        "tmp%1#1"
+      ],
+      "stack_out": [
+        "tmp%1#1"
+      ]
+    },
+    "45": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "46": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "48": {
+      "op": "bz main_create_NoOp@10",
+      "stack_out": []
+    },
+    "51": {
+      "op": "pushbytess 0x9ecdd367 0x7086e488 0x72a894bb 0x2310ea3e // method \"split_payment(address[],uint64[],axfer)bool\", method \"split_equal(address[],axfer)bool\", method \"split_percentage(address[],uint64[],axfer)bool\", method \"get_total_splits()uint64\"",
+      "defined_out": [
+        "Method(get_total_splits()uint64)",
+        "Method(split_equal(address[],axfer)bool)",
+        "Method(split_payment(address[],uint64[],axfer)bool)",
+        "Method(split_percentage(address[],uint64[],axfer)bool)"
+      ],
+      "stack_out": [
+        "Method(split_payment(address[],uint64[],axfer)bool)",
+        "Method(split_equal(address[],axfer)bool)",
+        "Method(split_percentage(address[],uint64[],axfer)bool)",
+        "Method(get_total_splits()uint64)"
+      ]
+    },
+    "73": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(get_total_splits()uint64)",
+        "Method(split_equal(address[],axfer)bool)",
+        "Method(split_payment(address[],uint64[],axfer)bool)",
+        "Method(split_percentage(address[],uint64[],axfer)bool)",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "Method(split_payment(address[],uint64[],axfer)bool)",
+        "Method(split_equal(address[],axfer)bool)",
+        "Method(split_percentage(address[],uint64[],axfer)bool)",
+        "Method(get_total_splits()uint64)",
+        "tmp%4#0"
+      ]
+    },
+    "76": {
+      "op": "match split_payment split_equal split_percentage get_total_splits",
+      "stack_out": []
+    },
+    "86": {
+      "op": "err"
+    },
+    "87": {
+      "block": "main_create_NoOp@10",
+      "stack_in": [],
+      "op": "pushbytes 0xc0b64352 // method \"create(address,uint64)void\"",
+      "defined_out": [
+        "Method(create(address,uint64)void)"
+      ],
+      "stack_out": [
+        "Method(create(address,uint64)void)"
+      ]
+    },
+    "93": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(create(address,uint64)void)",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "Method(create(address,uint64)void)",
+        "tmp%5#0"
+      ]
+    },
+    "96": {
+      "op": "match create",
+      "stack_out": []
+    },
+    "100": {
+      "op": "err"
+    },
+    "101": {
+      "subroutine": "payout_splitter.contract.PayoutSplitter.create[routing]",
+      "params": {},
+      "block": "create",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "admin#0"
+      ],
+      "stack_out": [
+        "admin#0"
+      ]
+    },
+    "104": {
+      "op": "dup",
+      "defined_out": [
+        "admin#0",
+        "admin#0 (copy)"
+      ],
+      "stack_out": [
+        "admin#0",
+        "admin#0 (copy)"
+      ]
+    },
+    "105": {
+      "op": "len",
+      "defined_out": [
+        "admin#0",
+        "len%0#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "len%0#0"
+      ]
+    },
+    "106": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "admin#0",
+        "len%0#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "len%0#0",
+        "32"
+      ]
+    },
+    "107": {
+      "op": "==",
+      "defined_out": [
+        "admin#0",
+        "eq%0#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "eq%0#0"
+      ]
+    },
+    "108": {
+      "error": "invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "op": "assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>",
+      "stack_out": [
+        "admin#0"
+      ]
+    },
+    "109": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "admin#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "tmp%1#0"
+      ]
+    },
+    "112": {
+      "op": "dup",
+      "defined_out": [
+        "admin#0",
+        "tmp%1#0",
+        "tmp%1#0 (copy)"
+      ],
+      "stack_out": [
+        "admin#0",
+        "tmp%1#0",
+        "tmp%1#0 (copy)"
+      ]
+    },
+    "113": {
+      "op": "len",
+      "defined_out": [
+        "admin#0",
+        "len%1#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "tmp%1#0",
+        "len%1#0"
+      ]
+    },
+    "114": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "admin#0",
+        "len%1#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "tmp%1#0",
+        "len%1#0",
+        "8"
+      ]
+    },
+    "115": {
+      "op": "==",
+      "defined_out": [
+        "admin#0",
+        "eq%1#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "tmp%1#0",
+        "eq%1#0"
+      ]
+    },
+    "116": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "admin#0",
+        "tmp%1#0"
+      ]
+    },
+    "117": {
+      "op": "btoi",
+      "defined_out": [
+        "admin#0",
+        "usdc_asset#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "usdc_asset#0"
+      ]
+    },
+    "118": {
+      "op": "pushbytes \"admin\"",
+      "defined_out": [
+        "\"admin\"",
+        "admin#0",
+        "usdc_asset#0"
+      ],
+      "stack_out": [
+        "admin#0",
+        "usdc_asset#0",
+        "\"admin\""
+      ]
+    },
+    "125": {
+      "op": "uncover 2",
+      "stack_out": [
+        "usdc_asset#0",
+        "\"admin\"",
+        "admin#0"
+      ]
+    },
+    "127": {
+      "op": "app_global_put",
+      "stack_out": [
+        "usdc_asset#0"
+      ]
+    },
+    "128": {
+      "op": "bytec_1 // \"usdc_asset_id\"",
+      "defined_out": [
+        "\"usdc_asset_id\"",
+        "usdc_asset#0"
+      ],
+      "stack_out": [
+        "usdc_asset#0",
+        "\"usdc_asset_id\""
+      ]
+    },
+    "129": {
+      "op": "swap",
+      "stack_out": [
+        "\"usdc_asset_id\"",
+        "usdc_asset#0"
+      ]
+    },
+    "130": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "131": {
+      "op": "bytec_0 // \"total_splits\"",
+      "defined_out": [
+        "\"total_splits\""
+      ],
+      "stack_out": [
+        "\"total_splits\""
+      ]
+    },
+    "132": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"total_splits\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"total_splits\"",
+        "0"
+      ]
+    },
+    "133": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "134": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "135": {
+      "op": "return",
+      "stack_out": []
+    },
+    "136": {
+      "subroutine": "payout_splitter.contract.PayoutSplitter.split_payment[routing]",
+      "params": {},
+      "block": "split_payment",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1"
+    },
+    "139": {
+      "op": "dupn 2",
+      "defined_out": [
+        "recipients#0",
+        "recipients#0 (copy)"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "recipients#0",
+        "recipients#0 (copy)"
+      ]
+    },
+    "141": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "recipients#0",
+        "recipients#0",
+        "recipients#0 (copy)",
+        "0"
+      ]
+    },
+    "142": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "recipients#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "143": {
+      "op": "dup",
+      "stack_out": [
+        "recipients#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "144": {
+      "op": "cover 2",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "146": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "147": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "32"
+      ]
+    },
+    "148": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "mul%0#0"
+      ]
+    },
+    "149": {
+      "op": "pushint 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "2"
+      ]
+    },
+    "151": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "add%0#0"
+      ]
+    },
+    "152": {
+      "op": "uncover 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "add%0#0",
+        "recipients#0"
+      ]
+    },
+    "154": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "aggregate%array_length%0#0",
+        "len%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "add%0#0",
+        "len%0#0"
+      ]
+    },
+    "155": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "eq%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "eq%0#0"
+      ]
+    },
+    "156": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.static_array<arc4.uint8, 32>>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.static_array<arc4.uint8, 32>>",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "157": {
+      "op": "txna ApplicationArgs 2"
+    },
+    "160": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "amounts#0"
+      ]
+    },
+    "161": {
+      "op": "cover 2",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0"
+      ]
+    },
+    "163": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "amounts#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "amounts#0 (copy)"
+      ]
+    },
+    "164": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "amounts#0 (copy)",
+        "0"
+      ]
+    },
+    "165": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "166": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0 (copy)",
+        "amounts#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0 (copy)"
+      ]
+    },
+    "167": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0 (copy)",
+        "amounts#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0 (copy)",
+        "8"
+      ]
+    },
+    "168": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "mul%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%1#0",
+        "mul%1#0"
+      ]
+    },
+    "169": {
+      "op": "pushint 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%1#0",
+        "mul%1#0",
+        "2"
+      ]
+    },
+    "171": {
+      "op": "+",
+      "defined_out": [
+        "add%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%1#0",
+        "add%1#0"
+      ]
+    },
+    "172": {
+      "op": "uncover 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "add%1#0",
+        "amounts#0"
+      ]
+    },
+    "174": {
+      "op": "len",
+      "defined_out": [
+        "add%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "len%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "add%1#0",
+        "len%1#0"
+      ]
+    },
+    "175": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "eq%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "eq%1#0"
+      ]
+    },
+    "176": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint64>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint64>",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "177": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "recipients#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "tmp%2#0"
+      ]
+    },
+    "179": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "recipients#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "tmp%2#0",
+        "1"
+      ]
+    },
+    "180": {
+      "op": "-",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0"
+      ]
+    },
+    "181": {
+      "op": "dup",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0"
+      ]
+    },
+    "182": {
+      "op": "cover 3",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0"
+      ]
+    },
+    "184": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)"
+      ]
+    },
+    "185": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "gtxn_type%0#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "187": {
+      "op": "pushint 4 // axfer",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "axfer",
+        "gtxn_type%0#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "gtxn_type%0#0",
+        "axfer"
+      ]
+    },
+    "189": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "amounts#0",
+        "gtxn_type_matches%0#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "190": {
+      "error": "transaction type is axfer",
+      "op": "assert // transaction type is axfer",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0"
+      ]
+    },
+    "191": {
+      "op": "dig 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "193": {
+      "op": "uncover 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "195": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%2#1"
+      ]
+    },
+    "196": {
+      "error": "Recipients and amounts length mismatch",
+      "op": "assert // Recipients and amounts length mismatch",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "197": {
+      "op": "dig 1",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "199": {
+      "error": "No recipients",
+      "op": "assert // No recipients",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "200": {
+      "op": "swap",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "201": {
+      "op": "pushint 16",
+      "defined_out": [
+        "16",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "16"
+      ]
+    },
+    "203": {
+      "op": "<=",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "tmp%6#0"
+      ]
+    },
+    "204": {
+      "error": "Max 16 recipients per split",
+      "op": "assert // Max 16 recipients per split",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0"
+      ]
+    },
+    "205": {
+      "op": "dup",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)"
+      ]
+    },
+    "206": {
+      "op": "gtxns AssetReceiver",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "tmp%7#0"
+      ]
+    },
+    "208": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ]
+    },
+    "210": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "tmp%9#0"
+      ]
+    },
+    "211": {
+      "error": "Send to contract",
+      "op": "assert // Send to contract",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "payment_txn#0"
+      ]
+    },
+    "212": {
+      "op": "gtxns XferAsset",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "tmp%10#0"
+      ]
+    },
+    "214": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "tmp%10#0",
+        "0"
+      ]
+    },
+    "215": {
+      "op": "bytec_1 // \"usdc_asset_id\"",
+      "defined_out": [
+        "\"usdc_asset_id\"",
+        "0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "tmp%10#0",
+        "0",
+        "\"usdc_asset_id\""
+      ]
+    },
+    "216": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "tmp%10#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "217": {
+      "error": "check self.usdc_asset_id exists",
+      "op": "assert // check self.usdc_asset_id exists",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "tmp%10#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "218": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "tmp%11#0"
+      ]
+    },
+    "219": {
+      "error": "Must be USDC",
+      "op": "assert // Must be USDC",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0"
+      ]
+    },
+    "220": {
+      "op": "intc_0 // 0"
+    },
+    "221": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0",
+        "payment_txn#0",
+        "recipients#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "222": {
+      "block": "split_payment_for_header@2",
+      "stack_in": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "223": {
+      "op": "dig 5",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "225": {
+      "op": "<",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "continue_looping%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "continue_looping%0#0"
+      ]
+    },
+    "226": {
+      "op": "bz split_payment_after_for@5",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "229": {
+      "op": "dig 3",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "amounts#0"
+      ]
+    },
+    "231": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%0#0",
+        "amounts#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0"
+      ]
+    },
+    "234": {
+      "op": "dig 1",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0"
+      ]
+    },
+    "236": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%0#0",
+        "amounts#0",
+        "i#0",
+        "i#0 (copy)"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)",
+        "i#0 (copy)"
+      ]
+    },
+    "237": {
+      "op": "cover 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)"
+      ]
+    },
+    "239": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%0#0",
+        "amounts#0",
+        "i#0",
+        "i#0 (copy)"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)",
+        "8"
+      ]
+    },
+    "240": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%0#0",
+        "aggregate%bytes_offset%0#0",
+        "amounts#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "aggregate%bytes_offset%0#0"
+      ]
+    },
+    "241": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "tmp%13#0"
+      ]
+    },
+    "242": {
+      "op": "dig 3",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0",
+        "tmp%13#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "tmp%13#0",
+        "total#0"
+      ]
+    },
+    "244": {
+      "op": "+",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "total#0"
+      ]
+    },
+    "245": {
+      "op": "bury 3",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "247": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "248": {
+      "op": "+",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "249": {
+      "op": "bury 1",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "251": {
+      "op": "b split_payment_for_header@2"
+    },
+    "254": {
+      "block": "split_payment_after_for@5",
+      "stack_in": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ],
+      "op": "dig 2",
+      "defined_out": [
+        "payment_txn#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "payment_txn#0"
+      ]
+    },
+    "256": {
+      "op": "gtxns AssetAmount",
+      "defined_out": [
+        "payment_txn#0",
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "tmp%15#0"
+      ]
+    },
+    "258": {
+      "op": "dig 2",
+      "defined_out": [
+        "payment_txn#0",
+        "tmp%15#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "tmp%15#0",
+        "total#0"
+      ]
+    },
+    "260": {
+      "op": "==",
+      "defined_out": [
+        "payment_txn#0",
+        "tmp%16#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "tmp%16#0"
+      ]
+    },
+    "261": {
+      "error": "Payment amount mismatch",
+      "op": "assert // Payment amount mismatch",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "262": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "i#0",
+        "payment_txn#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "263": {
+      "op": "bury 1",
+      "defined_out": [
+        "i#0",
+        "payment_txn#0",
+        "total#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "265": {
+      "block": "split_payment_for_header@6",
+      "stack_in": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "266": {
+      "op": "dig 5",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "268": {
+      "op": "<",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "continue_looping%1#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "continue_looping%1#0"
+      ]
+    },
+    "269": {
+      "op": "bz split_payment_after_for@10",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "272": {
+      "op": "itxn_begin"
+    },
+    "273": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "aggregate%array_length%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "0"
+      ]
+    },
+    "274": {
+      "op": "bytec_1 // \"usdc_asset_id\"",
+      "defined_out": [
+        "\"usdc_asset_id\"",
+        "0",
+        "aggregate%array_length%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "0",
+        "\"usdc_asset_id\""
+      ]
+    },
+    "275": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0",
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "276": {
+      "error": "check self.usdc_asset_id exists",
+      "op": "assert // check self.usdc_asset_id exists",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "277": {
+      "op": "dig 6",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ]
+    },
+    "279": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%1#0"
+      ]
+    },
+    "282": {
+      "op": "dig 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0"
+      ]
+    },
+    "284": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0",
+        "i#0 (copy)",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0 (copy)",
+        "i#0 (copy)"
+      ]
+    },
+    "285": {
+      "op": "cover 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0 (copy)"
+      ]
+    },
+    "287": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0",
+        "i#0 (copy)",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0 (copy)",
+        "32"
+      ]
+    },
+    "288": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%1#0",
+        "aggregate%bytes_offset%1#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%array_trimmed%1#0",
+        "aggregate%bytes_offset%1#0"
+      ]
+    },
+    "289": {
+      "op": "intc_2 // 32",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%array_trimmed%1#0",
+        "aggregate%bytes_offset%1#0",
+        "32"
+      ]
+    },
+    "290": {
+      "error": "index access is out of bounds",
+      "op": "extract3 // on error: index access is out of bounds",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%encoded_element%1#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%encoded_element%1#0"
+      ]
+    },
+    "291": {
+      "op": "dig 6",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%encoded_element%1#0",
+        "amounts#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%encoded_element%1#0",
+        "amounts#0"
+      ]
+    },
+    "293": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%2#0",
+        "aggregate%encoded_element%1#0",
+        "amounts#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%encoded_element%1#0",
+        "aggregate%array_trimmed%2#0"
+      ]
+    },
+    "296": {
+      "op": "dig 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%encoded_element%1#0",
+        "aggregate%array_trimmed%2#0",
+        "i#0 (copy)"
+      ]
+    },
+    "298": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%2#0",
+        "aggregate%encoded_element%1#0",
+        "amounts#0",
+        "i#0",
+        "i#0 (copy)",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%encoded_element%1#0",
+        "aggregate%array_trimmed%2#0",
+        "i#0 (copy)",
+        "8"
+      ]
+    },
+    "299": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_trimmed%2#0",
+        "aggregate%bytes_offset%2#0",
+        "aggregate%encoded_element%1#0",
+        "amounts#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%encoded_element%1#0",
+        "aggregate%array_trimmed%2#0",
+        "aggregate%bytes_offset%2#0"
+      ]
+    },
+    "300": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%encoded_element%1#0",
+        "amounts#0",
+        "i#0",
+        "inner_txn_params%0%%param_AssetAmount_idx_0#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%encoded_element%1#0",
+        "inner_txn_params%0%%param_AssetAmount_idx_0#0"
+      ]
+    },
+    "301": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0",
+        "aggregate%encoded_element%1#0"
+      ]
+    },
+    "303": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%1#0",
+        "i#0"
+      ]
+    },
+    "305": {
+      "op": "swap",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "306": {
+      "op": "itxn_field XferAsset",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "308": {
+      "op": "pushint 4 // axfer",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "axfer",
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "axfer"
+      ]
+    },
+    "310": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "312": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "0"
+      ]
+    },
+    "313": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "315": {
+      "op": "itxn_submit"
+    },
+    "316": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "317": {
+      "op": "+",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "318": {
+      "op": "bury 1",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "320": {
+      "op": "b split_payment_for_header@6"
+    },
+    "323": {
+      "block": "split_payment_after_for@10",
+      "stack_in": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "0"
+      ]
+    },
+    "324": {
+      "op": "bytec_0 // \"total_splits\"",
+      "defined_out": [
+        "\"total_splits\"",
+        "0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "0",
+        "\"total_splits\""
+      ]
+    },
+    "325": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "326": {
+      "error": "check self.total_splits exists",
+      "op": "assert // check self.total_splits exists",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "327": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "maybe_value%2#0",
+        "1"
+      ]
+    },
+    "328": {
+      "op": "+",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "tmp%18#0"
+      ]
+    },
+    "329": {
+      "op": "bytec_0 // \"total_splits\"",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "tmp%18#0",
+        "\"total_splits\""
+      ]
+    },
+    "330": {
+      "op": "swap",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "\"total_splits\"",
+        "tmp%18#0"
+      ]
+    },
+    "331": {
+      "op": "app_global_put",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "332": {
+      "op": "bytec_2 // 0x151f7c7580",
+      "defined_out": [
+        "0x151f7c7580"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "0x151f7c7580"
+      ]
+    },
+    "333": {
+      "op": "log",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "334": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "335": {
+      "op": "return",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "amounts#0",
+        "payment_txn#0",
+        "total#0",
+        "i#0"
+      ]
+    },
+    "336": {
+      "subroutine": "payout_splitter.contract.PayoutSplitter.split_equal[routing]",
+      "params": {},
+      "block": "split_equal",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1"
+    },
+    "339": {
+      "op": "dupn 2",
+      "defined_out": [
+        "recipients#0",
+        "recipients#0 (copy)"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "recipients#0",
+        "recipients#0 (copy)"
+      ]
+    },
+    "341": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "recipients#0",
+        "recipients#0",
+        "recipients#0 (copy)",
+        "0"
+      ]
+    },
+    "342": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "recipients#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "343": {
+      "op": "dup",
+      "stack_out": [
+        "recipients#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "344": {
+      "op": "cover 2",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "346": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "347": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "32"
+      ]
+    },
+    "348": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "mul%0#0"
+      ]
+    },
+    "349": {
+      "op": "pushint 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "2"
+      ]
+    },
+    "351": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "add%0#0"
+      ]
+    },
+    "352": {
+      "op": "uncover 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "add%0#0",
+        "recipients#0"
+      ]
+    },
+    "354": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "aggregate%array_length%0#0",
+        "len%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "add%0#0",
+        "len%0#0"
+      ]
+    },
+    "355": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "eq%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "eq%0#0"
+      ]
+    },
+    "356": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.static_array<arc4.uint8, 32>>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.static_array<arc4.uint8, 32>>",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "357": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "359": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "tmp%1#0",
+        "1"
+      ]
+    },
+    "360": {
+      "op": "-",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "361": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)"
+      ]
+    },
+    "362": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "gtxn_type%0#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "364": {
+      "op": "pushint 4 // axfer",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "axfer",
+        "gtxn_type%0#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "gtxn_type%0#0",
+        "axfer"
+      ]
+    },
+    "366": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "gtxn_type_matches%0#0",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "367": {
+      "error": "transaction type is axfer",
+      "op": "assert // transaction type is axfer",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "368": {
+      "op": "dig 1",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "370": {
+      "error": "No recipients",
+      "op": "assert // No recipients",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "371": {
+      "op": "dig 1",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "373": {
+      "op": "pushint 16",
+      "defined_out": [
+        "16",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "payment_txn#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)",
+        "16"
+      ]
+    },
+    "375": {
+      "op": "<=",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%3#1"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%3#1"
+      ]
+    },
+    "376": {
+      "error": "Max 16 recipients",
+      "op": "assert // Max 16 recipients",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "377": {
+      "op": "dup",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)"
+      ]
+    },
+    "378": {
+      "op": "gtxns AssetReceiver",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%4#0"
+      ]
+    },
+    "380": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%4#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%4#0",
+        "tmp%5#0"
+      ]
+    },
+    "382": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%6#0"
+      ]
+    },
+    "383": {
+      "error": "Send to contract",
+      "op": "assert // Send to contract",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "384": {
+      "op": "dup",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)"
+      ]
+    },
+    "385": {
+      "op": "gtxns XferAsset",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%7#0"
+      ]
+    },
+    "387": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%7#0",
+        "0"
+      ]
+    },
+    "388": {
+      "op": "bytec_1 // \"usdc_asset_id\"",
+      "defined_out": [
+        "\"usdc_asset_id\"",
+        "0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%7#0",
+        "0",
+        "\"usdc_asset_id\""
+      ]
+    },
+    "389": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%7#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "390": {
+      "error": "check self.usdc_asset_id exists",
+      "op": "assert // check self.usdc_asset_id exists",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%7#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "391": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "recipients#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%8#0"
+      ]
+    },
+    "392": {
+      "error": "Must be USDC",
+      "op": "assert // Must be USDC",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "393": {
+      "op": "gtxns AssetAmount",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "total_amount#0"
+      ]
+    },
+    "395": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "total_amount#0",
+        "total_amount#0 (copy)"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "total_amount#0",
+        "total_amount#0 (copy)"
+      ]
+    },
+    "396": {
+      "op": "dig 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "total_amount#0",
+        "total_amount#0 (copy)",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "398": {
+      "op": "/",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "recipients#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "total_amount#0",
+        "per_recipient#0"
+      ]
+    },
+    "399": {
+      "op": "cover 2",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "aggregate%array_length%0#0",
+        "total_amount#0"
+      ]
+    },
+    "401": {
+      "op": "swap",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "total_amount#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "402": {
+      "op": "%",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "recipients#0",
+        "remainder#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0"
+      ]
+    },
+    "403": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0",
+        "per_recipient#0",
+        "recipients#0",
+        "remainder#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ]
+    },
+    "404": {
+      "block": "split_equal_for_header@2",
+      "stack_in": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "405": {
+      "op": "dig 4",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "407": {
+      "op": "<",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "continue_looping%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "continue_looping%0#0"
+      ]
+    },
+    "408": {
+      "op": "bz split_equal_after_for@8",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ]
+    },
+    "411": {
+      "op": "dup",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "412": {
+      "op": "bz split_equal_if_body@4",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ]
+    },
+    "415": {
+      "op": "dig 2",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amount#1",
+        "i#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1"
+      ]
+    },
+    "417": {
+      "block": "split_equal_after_if_else@5",
+      "stack_in": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1"
+      ],
+      "op": "itxn_begin"
+    },
+    "418": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "0"
+      ]
+    },
+    "419": {
+      "op": "bytec_1 // \"usdc_asset_id\"",
+      "defined_out": [
+        "\"usdc_asset_id\"",
+        "0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "0",
+        "\"usdc_asset_id\""
+      ]
+    },
+    "420": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "421": {
+      "error": "check self.usdc_asset_id exists",
+      "op": "assert // check self.usdc_asset_id exists",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "maybe_value%1#0"
+      ]
+    },
+    "422": {
+      "op": "dig 6",
+      "defined_out": [
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "maybe_value%1#0",
+        "recipients#0"
+      ]
+    },
+    "424": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "aggregate%array_trimmed%0#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%0#0"
+      ]
+    },
+    "427": {
+      "op": "dig 3",
+      "defined_out": [
+        "aggregate%array_trimmed%0#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0"
+      ]
+    },
+    "429": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_trimmed%0#0",
+        "i#0",
+        "i#0 (copy)",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)",
+        "i#0 (copy)"
+      ]
+    },
+    "430": {
+      "op": "cover 3",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)"
+      ]
+    },
+    "432": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "aggregate%array_trimmed%0#0",
+        "i#0",
+        "i#0 (copy)",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)",
+        "32"
+      ]
+    },
+    "433": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_trimmed%0#0",
+        "aggregate%bytes_offset%0#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%0#0",
+        "aggregate%bytes_offset%0#0"
+      ]
+    },
+    "434": {
+      "op": "intc_2 // 32",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%0#0",
+        "aggregate%bytes_offset%0#0",
+        "32"
+      ]
+    },
+    "435": {
+      "error": "index access is out of bounds",
+      "op": "extract3 // on error: index access is out of bounds",
+      "defined_out": [
+        "aggregate%encoded_element%0#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%encoded_element%0#0"
+      ]
+    },
+    "436": {
+      "op": "uncover 3",
+      "defined_out": [
+        "aggregate%encoded_element%0#0",
+        "amount#1",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%encoded_element%0#0",
+        "amount#1"
+      ]
+    },
+    "438": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%encoded_element%0#0"
+      ]
+    },
+    "440": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "442": {
+      "op": "itxn_field XferAsset",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "444": {
+      "op": "pushint 4 // axfer",
+      "defined_out": [
+        "axfer",
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0",
+        "axfer"
+      ]
+    },
+    "446": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "448": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0",
+        "0"
+      ]
+    },
+    "449": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "451": {
+      "op": "itxn_submit"
+    },
+    "452": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "453": {
+      "op": "+",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "454": {
+      "op": "bury 1",
+      "defined_out": [
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ]
+    },
+    "456": {
+      "op": "b split_equal_for_header@2"
+    },
+    "459": {
+      "block": "split_equal_if_body@4",
+      "stack_in": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ],
+      "op": "dig 2",
+      "defined_out": [
+        "per_recipient#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "per_recipient#0"
+      ]
+    },
+    "461": {
+      "op": "dig 2",
+      "defined_out": [
+        "per_recipient#0",
+        "remainder#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "per_recipient#0",
+        "remainder#0"
+      ]
+    },
+    "463": {
+      "op": "+",
+      "defined_out": [
+        "amount#1",
+        "per_recipient#0",
+        "remainder#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "amount#1"
+      ]
+    },
+    "464": {
+      "op": "b split_equal_after_if_else@5"
+    },
+    "467": {
+      "block": "split_equal_after_for@8",
+      "stack_in": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "0"
+      ]
+    },
+    "468": {
+      "op": "bytec_0 // \"total_splits\"",
+      "defined_out": [
+        "\"total_splits\"",
+        "0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "0",
+        "\"total_splits\""
+      ]
+    },
+    "469": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "470": {
+      "error": "check self.total_splits exists",
+      "op": "assert // check self.total_splits exists",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "471": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "maybe_value%2#0",
+        "1"
+      ]
+    },
+    "472": {
+      "op": "+",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "tmp%17#0"
+      ]
+    },
+    "473": {
+      "op": "bytec_0 // \"total_splits\"",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "tmp%17#0",
+        "\"total_splits\""
+      ]
+    },
+    "474": {
+      "op": "swap",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "\"total_splits\"",
+        "tmp%17#0"
+      ]
+    },
+    "475": {
+      "op": "app_global_put",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ]
+    },
+    "476": {
+      "op": "bytec_2 // 0x151f7c7580",
+      "defined_out": [
+        "0x151f7c7580"
+      ],
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "0x151f7c7580"
+      ]
+    },
+    "477": {
+      "op": "log",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ]
+    },
+    "478": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "479": {
+      "op": "return",
+      "stack_out": [
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "per_recipient#0",
+        "remainder#0",
+        "i#0"
+      ]
+    },
+    "480": {
+      "subroutine": "payout_splitter.contract.PayoutSplitter.split_percentage[routing]",
+      "params": {},
+      "block": "split_percentage",
+      "stack_in": [],
+      "op": "pushbytes \"\"",
+      "stack_out": [
+        "distributed#0"
+      ]
+    },
+    "482": {
+      "op": "dup",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0"
+      ]
+    },
+    "483": {
+      "op": "txna ApplicationArgs 1"
+    },
+    "486": {
+      "op": "dupn 2",
+      "defined_out": [
+        "recipients#0",
+        "recipients#0 (copy)"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "recipients#0",
+        "recipients#0 (copy)"
+      ]
+    },
+    "488": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "recipients#0",
+        "recipients#0 (copy)",
+        "0"
+      ]
+    },
+    "489": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "recipients#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "490": {
+      "op": "dup",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "491": {
+      "op": "cover 2",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "493": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "494": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0 (copy)",
+        "32"
+      ]
+    },
+    "495": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "mul%0#0"
+      ]
+    },
+    "496": {
+      "op": "pushint 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "mul%0#0",
+        "2"
+      ]
+    },
+    "498": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "aggregate%array_length%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "add%0#0"
+      ]
+    },
+    "499": {
+      "op": "uncover 2",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "add%0#0",
+        "recipients#0"
+      ]
+    },
+    "501": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "aggregate%array_length%0#0",
+        "len%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "add%0#0",
+        "len%0#0"
+      ]
+    },
+    "502": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "eq%0#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "eq%0#0"
+      ]
+    },
+    "503": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.static_array<arc4.uint8, 32>>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.static_array<arc4.uint8, 32>>",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "504": {
+      "op": "txna ApplicationArgs 2"
+    },
+    "507": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "percentages#0"
+      ]
+    },
+    "508": {
+      "op": "cover 2",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%0#0",
+        "percentages#0"
+      ]
+    },
+    "510": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "percentages#0 (copy)",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "percentages#0 (copy)"
+      ]
+    },
+    "511": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "percentages#0 (copy)",
+        "0"
+      ]
+    },
+    "512": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "513": {
+      "op": "dup",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "514": {
+      "op": "cover 3",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "516": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0 (copy)",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0 (copy)"
+      ]
+    },
+    "517": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0 (copy)",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%1#0 (copy)",
+        "8"
+      ]
+    },
+    "518": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "mul%1#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "mul%1#0"
+      ]
+    },
+    "519": {
+      "op": "pushint 2",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "mul%1#0",
+        "2"
+      ]
+    },
+    "521": {
+      "op": "+",
+      "defined_out": [
+        "add%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "add%1#0"
+      ]
+    },
+    "522": {
+      "op": "uncover 2",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "add%1#0",
+        "percentages#0"
+      ]
+    },
+    "524": {
+      "op": "len",
+      "defined_out": [
+        "add%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "len%1#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "add%1#0",
+        "len%1#0"
+      ]
+    },
+    "525": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "eq%1#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "eq%1#0"
+      ]
+    },
+    "526": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint64>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint64>",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "527": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "tmp%2#0"
+      ]
+    },
+    "529": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "tmp%2#0",
+        "1"
+      ]
+    },
+    "530": {
+      "op": "-",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0"
+      ]
+    },
+    "531": {
+      "op": "dup",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0"
+      ]
+    },
+    "532": {
+      "op": "cover 3",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0"
+      ]
+    },
+    "534": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)"
+      ]
+    },
+    "535": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "gtxn_type%0#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "537": {
+      "op": "pushint 4 // axfer",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "axfer",
+        "gtxn_type%0#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "gtxn_type%0#0",
+        "axfer"
+      ]
+    },
+    "539": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "gtxn_type_matches%0#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "540": {
+      "error": "transaction type is axfer",
+      "op": "assert // transaction type is axfer",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0"
+      ]
+    },
+    "541": {
+      "op": "dig 2",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "543": {
+      "op": "uncover 2",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "545": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%2#1"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "tmp%2#1"
+      ]
+    },
+    "546": {
+      "error": "Length mismatch",
+      "op": "assert // Length mismatch",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "547": {
+      "op": "dig 1",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0 (copy)"
+      ]
+    },
+    "549": {
+      "error": "No recipients",
+      "op": "assert // No recipients",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "payment_txn#0"
+      ]
+    },
+    "550": {
+      "op": "swap",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "551": {
+      "op": "pushint 16",
+      "defined_out": [
+        "16",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "aggregate%array_length%0#0",
+        "16"
+      ]
+    },
+    "553": {
+      "op": "<=",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "tmp%6#0"
+      ]
+    },
+    "554": {
+      "error": "Max 16 recipients",
+      "op": "assert // Max 16 recipients",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0"
+      ]
+    },
+    "555": {
+      "op": "dup",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "payment_txn#0 (copy)"
+      ]
+    },
+    "556": {
+      "op": "gtxns AssetReceiver",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "tmp%7#0"
+      ]
+    },
+    "558": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "tmp%7#0",
+        "tmp%8#0"
+      ]
+    },
+    "560": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0",
+        "tmp%9#0"
+      ]
+    },
+    "561": {
+      "error": "Send to contract",
+      "op": "assert // Send to contract",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "payment_txn#0"
+      ]
+    },
+    "562": {
+      "op": "gtxns XferAsset",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "tmp%10#0"
+      ]
+    },
+    "564": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "tmp%10#0",
+        "0"
+      ]
+    },
+    "565": {
+      "op": "bytec_1 // \"usdc_asset_id\"",
+      "defined_out": [
+        "\"usdc_asset_id\"",
+        "0",
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "tmp%10#0",
+        "0",
+        "\"usdc_asset_id\""
+      ]
+    },
+    "566": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "tmp%10#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "567": {
+      "error": "check self.usdc_asset_id exists",
+      "op": "assert // check self.usdc_asset_id exists",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "tmp%10#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "568": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "tmp%11#0"
+      ]
+    },
+    "569": {
+      "error": "Must be USDC",
+      "op": "assert // Must be USDC",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0"
+      ]
+    },
+    "570": {
+      "op": "intc_0 // 0"
+    },
+    "571": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "aggregate%array_length%1#0",
+        "i#0",
+        "payment_txn#0",
+        "percentages#0",
+        "recipients#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "572": {
+      "block": "split_percentage_for_header@2",
+      "stack_in": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "i#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "573": {
+      "op": "dig 4",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_length%1#0"
+      ]
+    },
+    "575": {
+      "op": "<",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "continue_looping%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "continue_looping%0#0"
+      ]
+    },
+    "576": {
+      "op": "bz split_percentage_after_for@5",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "579": {
+      "op": "dig 4",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "i#0",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "percentages#0"
+      ]
+    },
+    "581": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0"
+      ]
+    },
+    "584": {
+      "op": "dig 1",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0"
+      ]
+    },
+    "586": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0",
+        "i#0 (copy)",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)",
+        "i#0 (copy)"
+      ]
+    },
+    "587": {
+      "op": "cover 2",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)"
+      ]
+    },
+    "589": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "aggregate%array_length%1#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0",
+        "i#0 (copy)",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "i#0 (copy)",
+        "8"
+      ]
+    },
+    "590": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "aggregate%array_trimmed%0#0",
+        "aggregate%bytes_offset%0#0",
+        "i#0",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_trimmed%0#0",
+        "aggregate%bytes_offset%0#0"
+      ]
+    },
+    "591": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "i#0",
+        "percentages#0",
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "tmp%13#0"
+      ]
+    },
+    "592": {
+      "op": "dig 3",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "i#0",
+        "percentages#0",
+        "tmp%13#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "tmp%13#0",
+        "total_percentage#0"
+      ]
+    },
+    "594": {
+      "op": "+",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "total_percentage#0"
+      ]
+    },
+    "595": {
+      "op": "bury 3",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "i#0",
+        "percentages#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "597": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "aggregate%array_length%1#0",
+        "i#0",
+        "percentages#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "598": {
+      "op": "+",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "599": {
+      "op": "bury 1",
+      "defined_out": [
+        "aggregate%array_length%1#0",
+        "i#0",
+        "percentages#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "601": {
+      "op": "b split_percentage_for_header@2"
+    },
+    "604": {
+      "block": "split_percentage_after_for@5",
+      "stack_in": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ],
+      "op": "dig 1",
+      "defined_out": [
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "total_percentage#0"
+      ]
+    },
+    "606": {
+      "op": "pushint 10000",
+      "defined_out": [
+        "10000",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "total_percentage#0",
+        "10000"
+      ]
+    },
+    "609": {
+      "op": "==",
+      "defined_out": [
+        "tmp%15#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%15#0"
+      ]
+    },
+    "610": {
+      "error": "Percentages must sum to 100%",
+      "op": "assert // Percentages must sum to 100%",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "611": {
+      "op": "dig 2",
+      "defined_out": [
+        "payment_txn#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "payment_txn#0"
+      ]
+    },
+    "613": {
+      "op": "gtxns AssetAmount",
+      "defined_out": [
+        "payment_txn#0",
+        "total_amount#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "total_amount#0"
+      ]
+    },
+    "615": {
+      "op": "bury 8",
+      "defined_out": [
+        "payment_txn#0",
+        "total_amount#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "617": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "distributed#0",
+        "payment_txn#0",
+        "total_amount#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "distributed#0"
+      ]
+    },
+    "618": {
+      "op": "bury 9",
+      "defined_out": [
+        "distributed#0",
+        "payment_txn#0",
+        "total_amount#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "620": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "distributed#0",
+        "i#0",
+        "payment_txn#0",
+        "total_amount#0",
+        "total_percentage#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "621": {
+      "op": "bury 1",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "623": {
+      "block": "split_percentage_for_header@6",
+      "stack_in": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "i#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "624": {
+      "op": "dig 6",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "626": {
+      "op": "<",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "continue_looping%1#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "continue_looping%1#0"
+      ]
+    },
+    "627": {
+      "op": "bz split_percentage_after_for@13",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "630": {
+      "op": "dig 5",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "632": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "aggregate%array_length%0#0",
+        "i#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_length%0#0",
+        "1"
+      ]
+    },
+    "633": {
+      "op": "-",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0",
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%19#0"
+      ]
+    },
+    "634": {
+      "op": "dig 1",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%19#0",
+        "i#0"
+      ]
+    },
+    "636": {
+      "op": "==",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0",
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%20#0"
+      ]
+    },
+    "637": {
+      "op": "bz split_percentage_else_body@9",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "640": {
+      "op": "dig 7",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "i#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "total_amount#0"
+      ]
+    },
+    "642": {
+      "op": "dig 9",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "distributed#0",
+        "i#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "total_amount#0",
+        "distributed#0"
+      ]
+    },
+    "644": {
+      "op": "-",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "amount#0",
+        "distributed#0",
+        "i#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0"
+      ]
+    },
+    "645": {
+      "block": "split_percentage_after_if_else@10",
+      "stack_in": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0"
+      ],
+      "op": "itxn_begin"
+    },
+    "646": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "0"
+      ]
+    },
+    "647": {
+      "op": "bytec_1 // \"usdc_asset_id\"",
+      "defined_out": [
+        "\"usdc_asset_id\"",
+        "0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "0",
+        "\"usdc_asset_id\""
+      ]
+    },
+    "648": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "649": {
+      "error": "check self.usdc_asset_id exists",
+      "op": "assert // check self.usdc_asset_id exists",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "650": {
+      "op": "dig 8",
+      "defined_out": [
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ]
+    },
+    "652": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "aggregate%array_trimmed%2#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%2#0"
+      ]
+    },
+    "655": {
+      "op": "dig 3",
+      "defined_out": [
+        "aggregate%array_trimmed%2#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%2#0",
+        "i#0"
+      ]
+    },
+    "657": {
+      "op": "dup",
+      "defined_out": [
+        "aggregate%array_trimmed%2#0",
+        "i#0",
+        "i#0 (copy)",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%2#0",
+        "i#0 (copy)",
+        "i#0 (copy)"
+      ]
+    },
+    "658": {
+      "op": "cover 3",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%2#0",
+        "i#0 (copy)"
+      ]
+    },
+    "660": {
+      "op": "intc_2 // 32",
+      "defined_out": [
+        "32",
+        "aggregate%array_trimmed%2#0",
+        "i#0",
+        "i#0 (copy)",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%2#0",
+        "i#0 (copy)",
+        "32"
+      ]
+    },
+    "661": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_trimmed%2#0",
+        "aggregate%bytes_offset%2#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%2#0",
+        "aggregate%bytes_offset%2#0"
+      ]
+    },
+    "662": {
+      "op": "intc_2 // 32",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%array_trimmed%2#0",
+        "aggregate%bytes_offset%2#0",
+        "32"
+      ]
+    },
+    "663": {
+      "error": "index access is out of bounds",
+      "op": "extract3 // on error: index access is out of bounds",
+      "defined_out": [
+        "aggregate%encoded_element%2#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%encoded_element%2#0"
+      ]
+    },
+    "664": {
+      "op": "uncover 3",
+      "defined_out": [
+        "aggregate%encoded_element%2#0",
+        "amount#0",
+        "i#0",
+        "maybe_value%1#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%encoded_element%2#0",
+        "amount#0"
+      ]
+    },
+    "666": {
+      "op": "itxn_field AssetAmount",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "maybe_value%1#0",
+        "aggregate%encoded_element%2#0"
+      ]
+    },
+    "668": {
+      "op": "itxn_field AssetReceiver",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "670": {
+      "op": "itxn_field XferAsset",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "672": {
+      "op": "pushint 4 // axfer",
+      "defined_out": [
+        "axfer",
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "axfer"
+      ]
+    },
+    "674": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "676": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "0"
+      ]
+    },
+    "677": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "679": {
+      "op": "itxn_submit"
+    },
+    "680": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "681": {
+      "op": "+",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "i#0"
+      ]
+    },
+    "682": {
+      "op": "bury 1",
+      "defined_out": [
+        "i#0",
+        "recipients#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "684": {
+      "op": "b split_percentage_for_header@6"
+    },
+    "687": {
+      "block": "split_percentage_else_body@9",
+      "stack_in": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ],
+      "op": "dig 4",
+      "defined_out": [
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "percentages#0"
+      ]
+    },
+    "689": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "aggregate%array_trimmed%1#0",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_trimmed%1#0"
+      ]
+    },
+    "692": {
+      "op": "dig 1",
+      "defined_out": [
+        "aggregate%array_trimmed%1#0",
+        "i#0",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0"
+      ]
+    },
+    "694": {
+      "op": "intc_3 // 8",
+      "defined_out": [
+        "8",
+        "aggregate%array_trimmed%1#0",
+        "i#0",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_trimmed%1#0",
+        "i#0",
+        "8"
+      ]
+    },
+    "695": {
+      "op": "*",
+      "defined_out": [
+        "aggregate%array_trimmed%1#0",
+        "aggregate%bytes_offset%1#0",
+        "i#0",
+        "percentages#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "aggregate%array_trimmed%1#0",
+        "aggregate%bytes_offset%1#0"
+      ]
+    },
+    "696": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "i#0",
+        "percentages#0",
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%22#0"
+      ]
+    },
+    "697": {
+      "op": "dig 8",
+      "defined_out": [
+        "i#0",
+        "percentages#0",
+        "tmp%22#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%22#0",
+        "total_amount#0"
+      ]
+    },
+    "699": {
+      "op": "*",
+      "defined_out": [
+        "i#0",
+        "percentages#0",
+        "tmp%23#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%23#0"
+      ]
+    },
+    "700": {
+      "op": "pushint 10000",
+      "defined_out": [
+        "10000",
+        "i#0",
+        "percentages#0",
+        "tmp%23#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%23#0",
+        "10000"
+      ]
+    },
+    "703": {
+      "op": "/",
+      "defined_out": [
+        "amount#0",
+        "i#0",
+        "percentages#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0"
+      ]
+    },
+    "704": {
+      "op": "dup",
+      "defined_out": [
+        "amount#0",
+        "i#0",
+        "percentages#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "amount#0"
+      ]
+    },
+    "705": {
+      "op": "dig 10",
+      "defined_out": [
+        "amount#0",
+        "distributed#0",
+        "i#0",
+        "percentages#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "amount#0",
+        "distributed#0"
+      ]
+    },
+    "707": {
+      "op": "+",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0",
+        "distributed#0"
+      ]
+    },
+    "708": {
+      "op": "bury 10",
+      "defined_out": [
+        "amount#0",
+        "distributed#0",
+        "i#0",
+        "percentages#0",
+        "total_amount#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "amount#0"
+      ]
+    },
+    "710": {
+      "op": "b split_percentage_after_if_else@10"
+    },
+    "713": {
+      "block": "split_percentage_after_for@13",
+      "stack_in": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "0"
+      ]
+    },
+    "714": {
+      "op": "bytec_0 // \"total_splits\"",
+      "defined_out": [
+        "\"total_splits\"",
+        "0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "0",
+        "\"total_splits\""
+      ]
+    },
+    "715": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "716": {
+      "error": "check self.total_splits exists",
+      "op": "assert // check self.total_splits exists",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "717": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "maybe_value%2#0",
+        "1"
+      ]
+    },
+    "718": {
+      "op": "+",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%26#0"
+      ]
+    },
+    "719": {
+      "op": "bytec_0 // \"total_splits\"",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "tmp%26#0",
+        "\"total_splits\""
+      ]
+    },
+    "720": {
+      "op": "swap",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "\"total_splits\"",
+        "tmp%26#0"
+      ]
+    },
+    "721": {
+      "op": "app_global_put",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "722": {
+      "op": "bytec_2 // 0x151f7c7580",
+      "defined_out": [
+        "0x151f7c7580"
+      ],
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "0x151f7c7580"
+      ]
+    },
+    "723": {
+      "op": "log",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "724": {
+      "op": "intc_1 // 1",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0",
+        "1"
+      ]
+    },
+    "725": {
+      "op": "return",
+      "stack_out": [
+        "distributed#0",
+        "total_amount#0",
+        "recipients#0",
+        "aggregate%array_length%0#0",
+        "percentages#0",
+        "aggregate%array_length%1#0",
+        "payment_txn#0",
+        "total_percentage#0",
+        "i#0"
+      ]
+    },
+    "726": {
+      "subroutine": "payout_splitter.contract.PayoutSplitter.get_total_splits[routing]",
+      "params": {},
+      "block": "get_total_splits",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "727": {
+      "op": "bytec_0 // \"total_splits\"",
+      "defined_out": [
+        "\"total_splits\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"total_splits\""
+      ]
+    },
+    "728": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "729": {
+      "error": "check self.total_splits exists",
+      "op": "assert // check self.total_splits exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "730": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "731": {
+      "op": "pushbytes 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "737": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "738": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "739": {
+      "op": "log",
+      "stack_out": []
+    },
+    "740": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "741": {
+      "op": "return",
+      "stack_out": []
+    }
+  }
+}

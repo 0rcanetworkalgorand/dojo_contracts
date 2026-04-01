@@ -1,0 +1,461 @@
+#pragma version 11
+#pragma typetrack false
+
+// algopy.arc4.ARC4Contract.approval_program() -> uint64:
+main:
+    intcblock 0 1 2 82
+    bytecblock "admin" 0x151f7c7580 "total_agents"
+    // projects/smart_contracts/dojo_registry/contract.py:5
+    // class DojoRegistry(ARC4Contract):
+    txn OnCompletion
+    !
+    assert
+    txn ApplicationID
+    bz main_create_NoOp@11
+    pushbytess 0x939fc6a4 0xa01ce56e 0xb5b6af8e 0x7751cdb2 0x44221f59 // method "register_agent(string,address,uint64,byte[])bool", method "update_status(string,bool)bool", method "increment_tasks(string)bool", method "set_expiry(string,uint64)bool", method "get_agent(string)byte[]"
+    txna ApplicationArgs 0
+    match register_agent update_status increment_tasks set_expiry get_agent
+    err
+
+main_create_NoOp@11:
+    // projects/smart_contracts/dojo_registry/contract.py:5
+    // class DojoRegistry(ARC4Contract):
+    pushbytes 0xcc694eaa // method "create(address)void"
+    txna ApplicationArgs 0
+    match create
+    err
+
+
+// dojo_registry.contract.DojoRegistry.create[routing]() -> void:
+create:
+    // projects/smart_contracts/dojo_registry/contract.py:12
+    // @abimethod(create="require")
+    txna ApplicationArgs 1
+    dup
+    len
+    pushint 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // projects/smart_contracts/dojo_registry/contract.py:15
+    // self.admin.value = admin.native
+    bytec_0 // "admin"
+    swap
+    app_global_put
+    // projects/smart_contracts/dojo_registry/contract.py:16
+    // self.total_agents.value = UInt64(0)
+    bytec_2 // "total_agents"
+    intc_0 // 0
+    app_global_put
+    // projects/smart_contracts/dojo_registry/contract.py:12
+    // @abimethod(create="require")
+    intc_1 // 1
+    return
+
+
+// dojo_registry.contract.DojoRegistry.register_agent[routing]() -> void:
+register_agent:
+    // projects/smart_contracts/dojo_registry/contract.py:18
+    // @abimethod
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    txna ApplicationArgs 2
+    dup
+    len
+    pushint 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    txna ApplicationArgs 3
+    dup
+    len
+    pushint 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    txna ApplicationArgs 4
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    extract 2 0
+    // projects/smart_contracts/dojo_registry/contract.py:27
+    // assert Txn.sender == self.admin.value, "Only admin can register"
+    txn Sender
+    intc_0 // 0
+    bytec_0 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can register
+    // projects/smart_contracts/dojo_registry/contract.py:29
+    // box_key = agent_id.native.bytes
+    uncover 3
+    extract 2 0
+    // projects/smart_contracts/dojo_registry/contract.py:30
+    // assert not op.Box.length(box_key), "Agent already registered"
+    intc_0 // 0
+    assert // Agent already registered
+    // projects/smart_contracts/dojo_registry/contract.py:32-33
+    // # Box format: sensei(32) + lane(8) + status(1) + config_hash(32) + tasks(8) + expiry(8)
+    // sensei_bytes = op.extract(sensei.native.bytes, 0, 32)
+    uncover 3
+    extract 0 32
+    // projects/smart_contracts/dojo_registry/contract.py:34
+    // lane_bytes = op.itob(lane.native)
+    uncover 3
+    btoi
+    itob
+    // projects/smart_contracts/dojo_registry/contract.py:35
+    // part1 = op.concat(sensei_bytes, lane_bytes)
+    concat
+    // projects/smart_contracts/dojo_registry/contract.py:36
+    // part2 = op.concat(op.bzero(1), config_hash)
+    intc_1 // 1
+    bzero
+    uncover 3
+    concat
+    // projects/smart_contracts/dojo_registry/contract.py:37
+    // part3 = op.concat(part1, part2)
+    concat
+    // projects/smart_contracts/dojo_registry/contract.py:38
+    // box_data = op.concat(part3, op.bzero(16))
+    pushint 16
+    bzero
+    concat
+    // projects/smart_contracts/dojo_registry/contract.py:39
+    // op.Box.create(box_key, UInt64(89))
+    dig 1
+    pushint 89
+    box_create
+    pop
+    // projects/smart_contracts/dojo_registry/contract.py:40
+    // op.Box.put(box_key, box_data)
+    box_put
+    // projects/smart_contracts/dojo_registry/contract.py:42
+    // self.total_agents.value += UInt64(1)
+    intc_0 // 0
+    bytec_2 // "total_agents"
+    app_global_get_ex
+    assert // check self.total_agents exists
+    intc_1 // 1
+    +
+    bytec_2 // "total_agents"
+    swap
+    app_global_put
+    // projects/smart_contracts/dojo_registry/contract.py:18
+    // @abimethod
+    bytec_1 // 0x151f7c7580
+    log
+    intc_1 // 1
+    return
+
+
+// dojo_registry.contract.DojoRegistry.update_status[routing]() -> void:
+update_status:
+    // projects/smart_contracts/dojo_registry/contract.py:45
+    // @abimethod
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    txna ApplicationArgs 2
+    dup
+    len
+    intc_1 // 1
+    ==
+    assert // invalid number of bytes for arc4.bool
+    // projects/smart_contracts/dojo_registry/contract.py:48
+    // assert Txn.sender == self.admin.value, "Only admin"
+    txn Sender
+    intc_0 // 0
+    bytec_0 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin
+    // projects/smart_contracts/dojo_registry/contract.py:50
+    // box_key = agent_id.native.bytes
+    swap
+    extract 2 0
+    // projects/smart_contracts/dojo_registry/contract.py:51
+    // length, exists = op.Box.length(box_key)
+    dup
+    box_len
+    bury 1
+    // projects/smart_contracts/dojo_registry/contract.py:52
+    // assert exists, "Agent not found"
+    assert // Agent not found
+    // projects/smart_contracts/dojo_registry/contract.py:54
+    // data, _exists = op.Box.get(box_key)
+    dup
+    box_get
+    pop
+    // projects/smart_contracts/dojo_registry/contract.py:55
+    // status_byte = Bytes(b"\x01") if active.native else Bytes(b"\x00")
+    uncover 2
+    intc_0 // 0
+    getbit
+    pushbytess 0x00 0x01
+    uncover 2
+    select
+    // projects/smart_contracts/dojo_registry/contract.py:56
+    // updated = data[:41] + status_byte + data[42:]
+    dig 1
+    len
+    pushint 41
+    dig 1
+    >=
+    pushint 41
+    dig 2
+    uncover 2
+    select
+    dig 3
+    intc_0 // 0
+    uncover 2
+    substring3
+    uncover 2
+    concat
+    pushint 42
+    dig 2
+    >=
+    pushint 42
+    dig 3
+    uncover 2
+    select
+    uncover 3
+    swap
+    uncover 3
+    substring3
+    concat
+    // projects/smart_contracts/dojo_registry/contract.py:57
+    // op.Box.put(box_key, updated)
+    box_put
+    // projects/smart_contracts/dojo_registry/contract.py:45
+    // @abimethod
+    bytec_1 // 0x151f7c7580
+    log
+    intc_1 // 1
+    return
+
+
+// dojo_registry.contract.DojoRegistry.increment_tasks[routing]() -> void:
+increment_tasks:
+    // projects/smart_contracts/dojo_registry/contract.py:61
+    // @abimethod
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    // projects/smart_contracts/dojo_registry/contract.py:64
+    // assert Txn.sender == self.admin.value, "Only admin"
+    txn Sender
+    intc_0 // 0
+    bytec_0 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin
+    // projects/smart_contracts/dojo_registry/contract.py:66
+    // box_key = agent_id.native.bytes
+    extract 2 0
+    // projects/smart_contracts/dojo_registry/contract.py:67
+    // data, _exists = op.Box.get(box_key)
+    dup
+    box_get
+    pop
+    // projects/smart_contracts/dojo_registry/contract.py:69
+    // task_count = op.btoi(op.extract(data, 74, 8))
+    dup
+    pushint 74
+    extract_uint64
+    // projects/smart_contracts/dojo_registry/contract.py:70
+    // new_count = task_count + UInt64(1)
+    intc_1 // 1
+    +
+    // projects/smart_contracts/dojo_registry/contract.py:71
+    // updated = data[:74] + op.itob(new_count) + data[82:]
+    dig 1
+    len
+    pushint 74
+    dig 1
+    >=
+    pushint 74
+    dig 2
+    uncover 2
+    select
+    dig 3
+    intc_0 // 0
+    uncover 2
+    substring3
+    uncover 2
+    itob
+    concat
+    intc_3 // 82
+    dig 2
+    >=
+    intc_3 // 82
+    dig 3
+    uncover 2
+    select
+    uncover 3
+    swap
+    uncover 3
+    substring3
+    concat
+    // projects/smart_contracts/dojo_registry/contract.py:72
+    // op.Box.put(box_key, updated)
+    box_put
+    // projects/smart_contracts/dojo_registry/contract.py:61
+    // @abimethod
+    bytec_1 // 0x151f7c7580
+    log
+    intc_1 // 1
+    return
+
+
+// dojo_registry.contract.DojoRegistry.set_expiry[routing]() -> void:
+set_expiry:
+    // projects/smart_contracts/dojo_registry/contract.py:76
+    // @abimethod
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    txna ApplicationArgs 2
+    dup
+    cover 2
+    len
+    pushint 8
+    ==
+    assert // invalid number of bytes for arc4.uint64
+    // projects/smart_contracts/dojo_registry/contract.py:79
+    // box_key = agent_id.native.bytes
+    extract 2 0
+    dup
+    // projects/smart_contracts/dojo_registry/contract.py:80
+    // data, _exists = op.Box.get(box_key)
+    box_get
+    pop
+    dup
+    // projects/smart_contracts/dojo_registry/contract.py:82-83
+    // # Get sensei from box
+    // sensei = Account(op.extract(data, 0, 32))
+    extract 0 32
+    // projects/smart_contracts/dojo_registry/contract.py:84
+    // assert Txn.sender == sensei or Txn.sender == self.admin.value, "Only sensei or admin"
+    txn Sender
+    ==
+    bnz set_expiry_bool_true@3
+    txn Sender
+    intc_0 // 0
+    bytec_0 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    bz set_expiry_bool_false@4
+
+set_expiry_bool_true@3:
+    intc_1 // 1
+
+set_expiry_bool_merge@5:
+    // projects/smart_contracts/dojo_registry/contract.py:84
+    // assert Txn.sender == sensei or Txn.sender == self.admin.value, "Only sensei or admin"
+    assert // Only sensei or admin
+    // projects/smart_contracts/dojo_registry/contract.py:86
+    // updated = op.concat(data[:82], op.itob(expiry_timestamp.native))
+    dupn 2
+    len
+    intc_3 // 82
+    dig 1
+    >=
+    intc_3 // 82
+    cover 2
+    select
+    intc_0 // 0
+    swap
+    substring3
+    dig 3
+    btoi
+    itob
+    concat
+    // projects/smart_contracts/dojo_registry/contract.py:87
+    // op.Box.put(box_key, updated)
+    dig 2
+    swap
+    box_put
+    // projects/smart_contracts/dojo_registry/contract.py:76
+    // @abimethod
+    bytec_1 // 0x151f7c7580
+    log
+    intc_1 // 1
+    return
+
+set_expiry_bool_false@4:
+    intc_0 // 0
+    b set_expiry_bool_merge@5
+
+
+// dojo_registry.contract.DojoRegistry.get_agent[routing]() -> void:
+get_agent:
+    // projects/smart_contracts/dojo_registry/contract.py:91
+    // @abimethod(readonly=True)
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_2 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    // projects/smart_contracts/dojo_registry/contract.py:94
+    // box_key = agent_id.native.bytes
+    extract 2 0
+    // projects/smart_contracts/dojo_registry/contract.py:95
+    // data, _exists = op.Box.get(box_key)
+    box_get
+    pop
+    // projects/smart_contracts/dojo_registry/contract.py:91
+    // @abimethod(readonly=True)
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    intc_1 // 1
+    return

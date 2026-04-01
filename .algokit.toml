@@ -1,0 +1,14 @@
+[project]
+type = 'contract'
+name = 'dojo-contracts'
+
+[project.deploy]
+command = 'python -m smart_contracts.helpers.deploy'
+environment_secrets = [
+    'ALGOD_TOKEN',
+    'ALGOD_SERVER',
+    'ALGOD_PORT',
+]
+
+[project.run]
+build = 'puyapy'
