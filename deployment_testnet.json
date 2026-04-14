@@ -36,12 +36,11 @@
       "31": 42
     }
   },
-  "timestamp": "2026-04-04T13:57:02.715Z",
-  "usdcAssetId": 10458941,
+  "timestamp": "2026-04-14T16:39:49.438Z",
   "contracts": {
-    "DojoRegistry": 758273132,
-    "EscrowVault": 758273134,
-    "CommitmentLock": 758273145,
-    "PayoutSplitter": 758273149
+    "DojoRegistry": 758815322,
+    "EscrowVault": 758815323,
+    "CommitmentLock": 758815324,
+    "PayoutSplitter": 758815334
   }
 }

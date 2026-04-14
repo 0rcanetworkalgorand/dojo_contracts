@@ -7,15 +7,13 @@ class CommitmentLock(ARC4Contract):
     
     def __init__(self) -> None:
         self.admin = GlobalState(Account)
-        self.usdc_asset_id = GlobalState(UInt64)
         self.treasury = GlobalState(Account)
         self.total_stakes = GlobalState(UInt64)
     
     @abimethod(create="require")
-    def create(self, admin: Address, usdc_asset: Asset, treasury: Address) -> None:
-        """Initialize with admin, USDC ASA, and treasury address."""
+    def create(self, admin: Address, treasury: Address) -> None:
+        """Initialize with admin and treasury address."""
         self.admin.value = admin.native
-        self.usdc_asset_id.value = usdc_asset.id
         self.treasury.value = treasury.native
         self.total_stakes.value = UInt64(0)
     
@@ -26,17 +24,16 @@ class CommitmentLock(ARC4Contract):
         sensei: Address,
         amount: ARC4UInt64,
         lock_days: ARC4UInt64,
-        stake_txn: gtxn.AssetTransferTransaction,
+        stake_txn: gtxn.PaymentTransaction,
     ) -> Bool:
-        """Sensei stakes USDC for 30/60/90 days."""
+        """Sensei stakes ALGO for 30/60/90 days."""
         assert lock_days.native == UInt64(30) or lock_days.native == UInt64(60) or lock_days.native == UInt64(90), "Invalid lock period"
         assert stake_txn.sender == sensei.native, "Sensei must send stake"
-        assert stake_txn.asset_receiver == Global.current_application_address, "Send to contract"
-        assert stake_txn.xfer_asset == Asset(self.usdc_asset_id.value), "Must be USDC"
-        assert stake_txn.asset_amount == amount.native, "Amount mismatch"
+        assert stake_txn.receiver == Global.current_application_address, "Send to contract"
+        assert stake_txn.amount == amount.native, "Amount mismatch"
         
         box_key = stake_id.native.bytes
-        assert not op.Box.length(box_key), "Stake already exists"
+        assert not op.Box.length(box_key)[1], "Stake already exists"
         
         lock_seconds = lock_days.native * UInt64(86400)
         unlock_time = Global.latest_timestamp + lock_seconds
@@ -72,10 +69,9 @@ class CommitmentLock(ARC4Contract):
         assert Global.latest_timestamp >= unlock_time, "Still locked"
         
         # Clean exit - return full stake
-        itxn.AssetTransfer(
-            xfer_asset=Asset(self.usdc_asset_id.value),
-            asset_receiver=sensei,
-            asset_amount=amount,
+        itxn.Payment(
+            receiver=sensei,
+            amount=amount,
         ).submit()
         
         # Mark as withdrawn
@@ -85,7 +81,7 @@ class CommitmentLock(ARC4Contract):
         return Bool(True)
     
     @abimethod
-    def early_withdraw(self, stake_id: ARC4String) -> Bool:
+    def release_commitment(self, stake_id: ARC4String) -> Bool:
         """Early withdrawal triggers pro-rated penalty sent to treasury."""
         box_key = stake_id.native.bytes
         data, _exists = op.Box.get(box_key)
@@ -110,17 +106,15 @@ class CommitmentLock(ARC4Contract):
         refund = amount - penalty
         
         # Send penalty to treasury
-        itxn.AssetTransfer(
-            xfer_asset=Asset(self.usdc_asset_id.value),
-            asset_receiver=self.treasury.value,
-            asset_amount=penalty,
+        itxn.Payment(
+            receiver=self.treasury.value,
+            amount=penalty,
         ).submit()
         
         # Return remaining to sensei
-        itxn.AssetTransfer(
-            xfer_asset=Asset(self.usdc_asset_id.value),
-            asset_receiver=sensei,
-            asset_amount=refund,
+        itxn.Payment(
+            receiver=sensei,
+            amount=refund,
         ).submit()
         
         # Mark as withdrawn

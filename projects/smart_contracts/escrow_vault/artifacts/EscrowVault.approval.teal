@@ -4,23 +4,23 @@
 // algopy.arc4.ARC4Contract.approval_program() -> uint64:
 main:
     intcblock 0 1 80 2
-    bytecblock "usdc_asset_id" 0x151f7c7580 "admin" "total_tasks"
+    bytecblock 0x151f7c7580 "admin" "total_tasks"
     // projects/smart_contracts/escrow_vault/contract.py:5
     // class EscrowVault(ARC4Contract):
     txn OnCompletion
     !
     assert
     txn ApplicationID
-    bz main_create_NoOp@11
-    pushbytess 0xce199e1b 0xe83b295d 0x106e9930 0x1edfd2ef 0x47251af1 // method "lock_bounty(string,address,address,uint64,uint64,axfer)bool", method "lock_collateral(string,axfer)bool", method "release_payment(string)bool", method "slash_collateral(string,address)bool", method "get_task(string)byte[]"
+    bz main_create_NoOp@12
+    pushbytess 0x5203a8f5 0x117798d8 0xea3e0237 0x34fc176f 0x1edfd2ef 0x47251af1 // method "lock_bounty(string,address,address,uint64,uint64,pay)bool", method "lock_collateral(string,pay)bool", method "submit_task(string,byte[])bool", method "release_payment(string,address)bool", method "slash_collateral(string,address)bool", method "get_task(string)byte[]"
     txna ApplicationArgs 0
-    match lock_bounty lock_collateral release_payment slash_collateral get_task
+    match lock_bounty lock_collateral submit_task release_payment slash_collateral get_task
     err
 
-main_create_NoOp@11:
+main_create_NoOp@12:
     // projects/smart_contracts/escrow_vault/contract.py:5
     // class EscrowVault(ARC4Contract):
-    pushbytes 0xc0b64352 // method "create(address,uint64)void"
+    pushbytes 0xcc694eaa // method "create(address)void"
     txna ApplicationArgs 0
     match create
     err
@@ -28,7 +28,7 @@ main_create_NoOp@11:
 
 // escrow_vault.contract.EscrowVault.create[routing]() -> void:
 create:
-    // projects/smart_contracts/escrow_vault/contract.py:13
+    // projects/smart_contracts/escrow_vault/contract.py:12
     // @abimethod(create="require")
     txna ApplicationArgs 1
     dup
@@ -36,29 +36,17 @@ create:
     pushint 32
     ==
     assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
-    txna ApplicationArgs 2
-    dup
-    len
-    pushint 8
-    ==
-    assert // invalid number of bytes for arc4.uint64
-    btoi
-    // projects/smart_contracts/escrow_vault/contract.py:16
+    // projects/smart_contracts/escrow_vault/contract.py:15
     // self.admin.value = admin.native
-    bytec_2 // "admin"
-    uncover 2
-    app_global_put
-    // projects/smart_contracts/escrow_vault/contract.py:17
-    // self.usdc_asset_id.value = usdc_asset.id
-    bytec_0 // "usdc_asset_id"
+    bytec_1 // "admin"
     swap
     app_global_put
-    // projects/smart_contracts/escrow_vault/contract.py:18
+    // projects/smart_contracts/escrow_vault/contract.py:16
     // self.total_tasks.value = UInt64(0)
-    bytec_3 // "total_tasks"
+    bytec_2 // "total_tasks"
     intc_0 // 0
     app_global_put
-    // projects/smart_contracts/escrow_vault/contract.py:13
+    // projects/smart_contracts/escrow_vault/contract.py:12
     // @abimethod(create="require")
     intc_1 // 1
     return
@@ -66,7 +54,7 @@ create:
 
 // escrow_vault.contract.EscrowVault.lock_bounty[routing]() -> void:
 lock_bounty:
-    // projects/smart_contracts/escrow_vault/contract.py:20
+    // projects/smart_contracts/escrow_vault/contract.py:18
     // @abimethod
     txna ApplicationArgs 1
     dup
@@ -107,109 +95,103 @@ lock_bounty:
     -
     dup
     gtxns TypeEnum
-    pushint 4 // axfer
+    intc_1 // pay
     ==
-    assert // transaction type is axfer
-    // projects/smart_contracts/escrow_vault/contract.py:31
+    assert // transaction type is pay
+    // projects/smart_contracts/escrow_vault/contract.py:29
     // assert bounty_txn.sender == client.native, "Client must send bounty"
     dup
     gtxns Sender
     dig 5
     ==
     assert // Client must send bounty
-    // projects/smart_contracts/escrow_vault/contract.py:32
-    // assert bounty_txn.asset_receiver == Global.current_application_address, "Send to contract"
+    // projects/smart_contracts/escrow_vault/contract.py:30
+    // assert bounty_txn.receiver == Global.current_application_address, "Send to contract"
     dup
-    gtxns AssetReceiver
+    gtxns Receiver
     global CurrentApplicationAddress
     ==
     assert // Send to contract
-    // projects/smart_contracts/escrow_vault/contract.py:33
-    // assert bounty_txn.xfer_asset == Asset(self.usdc_asset_id.value), "Must be USDC"
-    dup
-    gtxns XferAsset
-    intc_0 // 0
-    bytec_0 // "usdc_asset_id"
-    app_global_get_ex
-    assert // check self.usdc_asset_id exists
-    ==
-    assert // Must be USDC
-    // projects/smart_contracts/escrow_vault/contract.py:34
-    // assert bounty_txn.asset_amount == bounty_amount.native, "Amount mismatch"
-    gtxns AssetAmount
+    // projects/smart_contracts/escrow_vault/contract.py:31
+    // assert bounty_txn.amount == bounty_amount.native, "Amount mismatch"
+    gtxns Amount
     uncover 2
     btoi
     swap
     dig 1
     ==
     assert // Amount mismatch
-    // projects/smart_contracts/escrow_vault/contract.py:36
+    // projects/smart_contracts/escrow_vault/contract.py:33
     // box_key = task_id.native.bytes
     uncover 4
     extract 2 0
-    // projects/smart_contracts/escrow_vault/contract.py:37
-    // assert not op.Box.length(box_key), "Task already exists"
-    intc_0 // 0
+    // projects/smart_contracts/escrow_vault/contract.py:34
+    // assert not op.Box.length(box_key)[1], "Task already exists"
+    dup
+    box_len
+    bury 1
+    !
     assert // Task already exists
-    // projects/smart_contracts/escrow_vault/contract.py:39-41
-    // # Box format: client(32) + worker(32) + bounty(8) + collateral(8) + status(1) = 81 bytes
-    // # status: 0=locked, 1=completed, 2=slashed
+    // projects/smart_contracts/escrow_vault/contract.py:36-38
+    // # Box format: client(32) + worker(32) + bounty(8) + collateral(8) + status(1) + kite_hash(32) = 113 bytes
+    // # status: 0=locked, 1=submitted, 2=completed, 3=slashed
     // client_bytes = op.extract(client.native.bytes, 0, 32)
     uncover 4
     extract 0 32
-    // projects/smart_contracts/escrow_vault/contract.py:42
+    // projects/smart_contracts/escrow_vault/contract.py:39
     // worker_bytes = op.extract(worker.native.bytes, 0, 32)
     uncover 4
     extract 0 32
-    // projects/smart_contracts/escrow_vault/contract.py:43
+    // projects/smart_contracts/escrow_vault/contract.py:40
     // bounty_bytes = op.itob(bounty_amount.native)
     uncover 3
     itob
-    // projects/smart_contracts/escrow_vault/contract.py:44
+    // projects/smart_contracts/escrow_vault/contract.py:41
     // collateral_bytes = op.itob(collateral_amount.native)
     uncover 4
     btoi
     itob
-    // projects/smart_contracts/escrow_vault/contract.py:45
+    // projects/smart_contracts/escrow_vault/contract.py:42
     // part1 = op.concat(client_bytes, worker_bytes)
     uncover 3
     uncover 3
     concat
-    // projects/smart_contracts/escrow_vault/contract.py:46
+    // projects/smart_contracts/escrow_vault/contract.py:43
     // part2 = op.concat(bounty_bytes, collateral_bytes)
     cover 2
     concat
-    // projects/smart_contracts/escrow_vault/contract.py:47
+    // projects/smart_contracts/escrow_vault/contract.py:44
     // part3 = op.concat(part1, part2)
     concat
-    // projects/smart_contracts/escrow_vault/contract.py:48
-    // box_data = op.concat(part3, op.bzero(1))
-    intc_1 // 1
+    // projects/smart_contracts/escrow_vault/contract.py:45-46
+    // # Add status (0) and placeholder for hash
+    // box_data = op.concat(part3, op.bzero(33))
+    pushint 33
     bzero
     concat
-    // projects/smart_contracts/escrow_vault/contract.py:49
-    // op.Box.create(box_key, UInt64(81))
+    // projects/smart_contracts/escrow_vault/contract.py:47
+    // op.Box.create(box_key, UInt64(113))
     dig 1
-    pushint 81
+    pushint 113
     box_create
     pop
-    // projects/smart_contracts/escrow_vault/contract.py:50
+    // projects/smart_contracts/escrow_vault/contract.py:48
     // op.Box.put(box_key, box_data)
     box_put
-    // projects/smart_contracts/escrow_vault/contract.py:52
+    // projects/smart_contracts/escrow_vault/contract.py:50
     // self.total_tasks.value += UInt64(1)
     intc_0 // 0
-    bytec_3 // "total_tasks"
+    bytec_2 // "total_tasks"
     app_global_get_ex
     assert // check self.total_tasks exists
     intc_1 // 1
     +
-    bytec_3 // "total_tasks"
+    bytec_2 // "total_tasks"
     swap
     app_global_put
-    // projects/smart_contracts/escrow_vault/contract.py:20
+    // projects/smart_contracts/escrow_vault/contract.py:18
     // @abimethod
-    bytec_1 // 0x151f7c7580
+    bytec_0 // 0x151f7c7580
     log
     intc_1 // 1
     return
@@ -217,7 +199,7 @@ lock_bounty:
 
 // escrow_vault.contract.EscrowVault.lock_collateral[routing]() -> void:
 lock_collateral:
-    // projects/smart_contracts/escrow_vault/contract.py:55
+    // projects/smart_contracts/escrow_vault/contract.py:53
     // @abimethod
     txna ApplicationArgs 1
     dup
@@ -234,67 +216,57 @@ lock_collateral:
     -
     dup
     gtxns TypeEnum
-    pushint 4 // axfer
+    intc_1 // pay
     ==
-    assert // transaction type is axfer
-    // projects/smart_contracts/escrow_vault/contract.py:62
+    assert // transaction type is pay
+    // projects/smart_contracts/escrow_vault/contract.py:60
     // box_key = task_id.native.bytes
     swap
     extract 2 0
-    // projects/smart_contracts/escrow_vault/contract.py:63
+    // projects/smart_contracts/escrow_vault/contract.py:61
     // data, _exists = op.Box.get(box_key)
     box_get
     pop
-    // projects/smart_contracts/escrow_vault/contract.py:65
+    // projects/smart_contracts/escrow_vault/contract.py:63
     // worker = Account(op.extract(data, 32, 32))
     dup
     extract 32 32
-    // projects/smart_contracts/escrow_vault/contract.py:66
+    // projects/smart_contracts/escrow_vault/contract.py:64
     // collateral_amount = op.btoi(op.extract(data, 72, 8))
     swap
     pushint 72
     extract_uint64
-    // projects/smart_contracts/escrow_vault/contract.py:68
+    // projects/smart_contracts/escrow_vault/contract.py:66
     // assert collateral_txn.sender == worker, "Worker must send collateral"
     dig 2
     gtxns Sender
     uncover 2
     ==
     assert // Worker must send collateral
-    // projects/smart_contracts/escrow_vault/contract.py:69
-    // assert collateral_txn.asset_receiver == Global.current_application_address, "Send to contract"
+    // projects/smart_contracts/escrow_vault/contract.py:67
+    // assert collateral_txn.receiver == Global.current_application_address, "Send to contract"
     dig 1
-    gtxns AssetReceiver
+    gtxns Receiver
     global CurrentApplicationAddress
     ==
     assert // Send to contract
-    // projects/smart_contracts/escrow_vault/contract.py:70
-    // assert collateral_txn.xfer_asset == Asset(self.usdc_asset_id.value), "Must be USDC"
-    dig 1
-    gtxns XferAsset
-    intc_0 // 0
-    bytec_0 // "usdc_asset_id"
-    app_global_get_ex
-    assert // check self.usdc_asset_id exists
-    ==
-    assert // Must be USDC
-    // projects/smart_contracts/escrow_vault/contract.py:71
-    // assert collateral_txn.asset_amount == collateral_amount, "Amount mismatch"
+    // projects/smart_contracts/escrow_vault/contract.py:68
+    // assert collateral_txn.amount == collateral_amount, "Amount mismatch"
     swap
-    gtxns AssetAmount
+    gtxns Amount
     ==
     assert // Amount mismatch
-    // projects/smart_contracts/escrow_vault/contract.py:55
+    // projects/smart_contracts/escrow_vault/contract.py:53
     // @abimethod
-    bytec_1 // 0x151f7c7580
+    bytec_0 // 0x151f7c7580
     log
     intc_1 // 1
     return
 
 
-// escrow_vault.contract.EscrowVault.release_payment[routing]() -> void:
-release_payment:
-    // projects/smart_contracts/escrow_vault/contract.py:75
+// escrow_vault.contract.EscrowVault.submit_task[routing]() -> void:
+submit_task:
+    // projects/smart_contracts/escrow_vault/contract.py:72
     // @abimethod
     txna ApplicationArgs 1
     dup
@@ -306,80 +278,45 @@ release_payment:
     len
     ==
     assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
-    // projects/smart_contracts/escrow_vault/contract.py:78
-    // assert Txn.sender == self.admin.value, "Only admin"
-    txn Sender
+    txna ApplicationArgs 2
+    dup
     intc_0 // 0
-    bytec_2 // "admin"
-    app_global_get_ex
-    assert // check self.admin exists
+    extract_uint16 // on error: invalid array length header
+    intc_3 // 2
+    +
+    dig 1
+    len
     ==
-    assert // Only admin
-    // projects/smart_contracts/escrow_vault/contract.py:80
-    // box_key = task_id.native.bytes
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
     extract 2 0
-    // projects/smart_contracts/escrow_vault/contract.py:81
+    // projects/smart_contracts/escrow_vault/contract.py:75
+    // box_key = task_id.native.bytes
+    swap
+    extract 2 0
+    // projects/smart_contracts/escrow_vault/contract.py:76
     // data, _exists = op.Box.get(box_key)
     dup
     box_get
     pop
-    // projects/smart_contracts/escrow_vault/contract.py:83
+    // projects/smart_contracts/escrow_vault/contract.py:78
     // worker = Account(op.extract(data, 32, 32))
     dup
     extract 32 32
-    // projects/smart_contracts/escrow_vault/contract.py:84
-    // bounty = op.btoi(op.extract(data, 64, 8))
-    dig 1
-    pushint 64
-    extract_uint64
-    // projects/smart_contracts/escrow_vault/contract.py:85
-    // collateral = op.btoi(op.extract(data, 72, 8))
-    dig 2
-    pushint 72
-    extract_uint64
-    // projects/smart_contracts/escrow_vault/contract.py:88
-    // assert op.btoi(status) == UInt64(0), "Already settled"
-    dig 3
+    // projects/smart_contracts/escrow_vault/contract.py:81
+    // assert Txn.sender == worker, "Only assigned worker can submit"
+    txn Sender
+    ==
+    assert // Only assigned worker can submit
+    // projects/smart_contracts/escrow_vault/contract.py:82
+    // assert op.btoi(status) == UInt64(0), "Task not in lock state"
+    dup
     intc_2 // 80
     getbyte
     !
-    assert // Already settled
-    // projects/smart_contracts/escrow_vault/contract.py:90-91
-    // # Release bounty + collateral to worker
-    // total_payment = bounty + collateral
-    +
-    // projects/smart_contracts/escrow_vault/contract.py:92-96
-    // itxn.AssetTransfer(
-    //     xfer_asset=Asset(self.usdc_asset_id.value),
-    //     asset_receiver=worker,
-    //     asset_amount=total_payment,
-    // ).submit()
-    itxn_begin
-    // projects/smart_contracts/escrow_vault/contract.py:93
-    // xfer_asset=Asset(self.usdc_asset_id.value),
-    intc_0 // 0
-    bytec_0 // "usdc_asset_id"
-    app_global_get_ex
-    assert // check self.usdc_asset_id exists
-    itxn_field XferAsset
-    itxn_field AssetAmount
-    itxn_field AssetReceiver
-    // projects/smart_contracts/escrow_vault/contract.py:92
-    // itxn.AssetTransfer(
-    pushint 4 // axfer
-    itxn_field TypeEnum
-    intc_0 // 0
-    itxn_field Fee
-    // projects/smart_contracts/escrow_vault/contract.py:92-96
-    // itxn.AssetTransfer(
-    //     xfer_asset=Asset(self.usdc_asset_id.value),
-    //     asset_receiver=worker,
-    //     asset_amount=total_payment,
-    // ).submit()
-    itxn_submit
-    // projects/smart_contracts/escrow_vault/contract.py:98-99
-    // # Update status to completed
-    // updated = data[:80] + Bytes(b"\x01")
+    assert // Task not in lock state
+    // projects/smart_contracts/escrow_vault/contract.py:85-86
+    // # Update status to 1 (SUBMITTED) and store hash
+    // updated = data[:80] + Bytes(b"\x01") + kite_hash
     dup
     len
     intc_2 // 80
@@ -393,20 +330,22 @@ release_payment:
     substring3
     pushbytes 0x01
     concat
-    // projects/smart_contracts/escrow_vault/contract.py:100
+    uncover 2
+    concat
+    // projects/smart_contracts/escrow_vault/contract.py:87
     // op.Box.put(box_key, updated)
     box_put
-    // projects/smart_contracts/escrow_vault/contract.py:75
+    // projects/smart_contracts/escrow_vault/contract.py:72
     // @abimethod
-    bytec_1 // 0x151f7c7580
+    bytec_0 // 0x151f7c7580
     log
     intc_1 // 1
     return
 
 
-// escrow_vault.contract.EscrowVault.slash_collateral[routing]() -> void:
-slash_collateral:
-    // projects/smart_contracts/escrow_vault/contract.py:104
+// escrow_vault.contract.EscrowVault.release_payment[routing]() -> void:
+release_payment:
+    // projects/smart_contracts/escrow_vault/contract.py:90
     // @abimethod
     txna ApplicationArgs 1
     dup
@@ -424,130 +363,298 @@ slash_collateral:
     pushint 32
     ==
     assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
-    // projects/smart_contracts/escrow_vault/contract.py:107
+    // projects/smart_contracts/escrow_vault/contract.py:93
     // assert Txn.sender == self.admin.value, "Only admin"
     txn Sender
     intc_0 // 0
-    bytec_2 // "admin"
+    bytec_1 // "admin"
     app_global_get_ex
     assert // check self.admin exists
     ==
     assert // Only admin
-    // projects/smart_contracts/escrow_vault/contract.py:109
+    // projects/smart_contracts/escrow_vault/contract.py:95
     // box_key = task_id.native.bytes
     swap
     extract 2 0
-    // projects/smart_contracts/escrow_vault/contract.py:110
+    // projects/smart_contracts/escrow_vault/contract.py:96
     // data, _exists = op.Box.get(box_key)
     dup
     box_get
     pop
-    // projects/smart_contracts/escrow_vault/contract.py:112
-    // client = Account(op.extract(data, 0, 32))
+    // projects/smart_contracts/escrow_vault/contract.py:98
+    // worker = Account(op.extract(data, 32, 32))
     dup
-    extract 0 32
-    // projects/smart_contracts/escrow_vault/contract.py:113
+    extract 32 32
+    // projects/smart_contracts/escrow_vault/contract.py:99
     // bounty = op.btoi(op.extract(data, 64, 8))
     dig 1
     pushint 64
     extract_uint64
-    // projects/smart_contracts/escrow_vault/contract.py:114
+    // projects/smart_contracts/escrow_vault/contract.py:100
     // collateral = op.btoi(op.extract(data, 72, 8))
     dig 2
     pushint 72
     extract_uint64
-    // projects/smart_contracts/escrow_vault/contract.py:117
-    // assert op.btoi(status) == UInt64(0), "Already settled"
+    // projects/smart_contracts/escrow_vault/contract.py:103-104
+    // # Can be settled from locked (0) or submitted (1)
+    // assert op.btoi(status) <= UInt64(1), "Already settled or slashed"
     dig 3
     intc_2 // 80
     getbyte
-    !
-    assert // Already settled
-    // projects/smart_contracts/escrow_vault/contract.py:119-124
-    // # Return bounty to client
-    // itxn.AssetTransfer(
-    //     xfer_asset=Asset(self.usdc_asset_id.value),
-    //     asset_receiver=client,
-    //     asset_amount=bounty,
-    // ).submit()
-    itxn_begin
-    // projects/smart_contracts/escrow_vault/contract.py:121
-    // xfer_asset=Asset(self.usdc_asset_id.value),
-    intc_0 // 0
-    bytec_0 // "usdc_asset_id"
-    app_global_get_ex
-    assert // check self.usdc_asset_id exists
+    intc_1 // 1
+    <=
+    assert // Already settled or slashed
+    // projects/smart_contracts/escrow_vault/contract.py:106-107
+    // # Calculate 2% platform fee
+    // fee = (bounty * UInt64(200)) // UInt64(10000)
+    dig 1
+    pushint 200
+    *
+    pushint 10000
+    /
+    // projects/smart_contracts/escrow_vault/contract.py:108
+    // worker_bounty = bounty - fee
     uncover 2
-    itxn_field AssetAmount
+    dig 1
+    -
+    // projects/smart_contracts/escrow_vault/contract.py:109
+    // total_worker_payment = worker_bounty + collateral
     uncover 2
-    itxn_field AssetReceiver
-    dup
-    itxn_field XferAsset
-    // projects/smart_contracts/escrow_vault/contract.py:119-120
-    // # Return bounty to client
-    // itxn.AssetTransfer(
-    pushint 4 // axfer
-    itxn_field TypeEnum
-    intc_0 // 0
-    itxn_field Fee
-    // projects/smart_contracts/escrow_vault/contract.py:119-124
-    // # Return bounty to client
-    // itxn.AssetTransfer(
-    //     xfer_asset=Asset(self.usdc_asset_id.value),
-    //     asset_receiver=client,
-    //     asset_amount=bounty,
-    // ).submit()
-    itxn_submit
-    // projects/smart_contracts/escrow_vault/contract.py:126-131
-    // # Send collateral to treasury
-    // itxn.AssetTransfer(
-    //     xfer_asset=Asset(self.usdc_asset_id.value),
-    //     asset_receiver=treasury.native,
-    //     asset_amount=collateral,
+    +
+    // projects/smart_contracts/escrow_vault/contract.py:111-115
+    // # 1. Release fee to treasury
+    // itxn.Payment(
+    //     receiver=treasury.native,
+    //     amount=fee,
     // ).submit()
     itxn_begin
     swap
-    itxn_field AssetAmount
-    uncover 3
-    itxn_field AssetReceiver
-    itxn_field XferAsset
-    // projects/smart_contracts/escrow_vault/contract.py:126-127
-    // # Send collateral to treasury
-    // itxn.AssetTransfer(
-    pushint 4 // axfer
+    itxn_field Amount
+    uncover 4
+    itxn_field Receiver
+    // projects/smart_contracts/escrow_vault/contract.py:111-112
+    // # 1. Release fee to treasury
+    // itxn.Payment(
+    intc_1 // pay
     itxn_field TypeEnum
     intc_0 // 0
     itxn_field Fee
-    // projects/smart_contracts/escrow_vault/contract.py:126-131
-    // # Send collateral to treasury
-    // itxn.AssetTransfer(
-    //     xfer_asset=Asset(self.usdc_asset_id.value),
-    //     asset_receiver=treasury.native,
-    //     asset_amount=collateral,
+    // projects/smart_contracts/escrow_vault/contract.py:111-115
+    // # 1. Release fee to treasury
+    // itxn.Payment(
+    //     receiver=treasury.native,
+    //     amount=fee,
     // ).submit()
     itxn_submit
-    // projects/smart_contracts/escrow_vault/contract.py:133-134
-    // # Update status to slashed
-    // updated = data[:80] + Bytes(b"\x02")
+    // projects/smart_contracts/escrow_vault/contract.py:117-121
+    // # 2. Release bounty + collateral to worker
+    // itxn.Payment(
+    //     receiver=worker,
+    //     amount=total_worker_payment,
+    // ).submit()
+    itxn_begin
+    itxn_field Amount
+    itxn_field Receiver
+    // projects/smart_contracts/escrow_vault/contract.py:117-118
+    // # 2. Release bounty + collateral to worker
+    // itxn.Payment(
+    intc_1 // pay
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    // projects/smart_contracts/escrow_vault/contract.py:117-121
+    // # 2. Release bounty + collateral to worker
+    // itxn.Payment(
+    //     receiver=worker,
+    //     amount=total_worker_payment,
+    // ).submit()
+    itxn_submit
+    // projects/smart_contracts/escrow_vault/contract.py:123-124
+    // # Update status to 2 (COMPLETED)
+    // updated = data[:80] + Bytes(b"\x02") + data[81:]
     dup
     len
     intc_2 // 80
     dig 1
     >=
     intc_2 // 80
-    cover 2
+    dig 2
+    uncover 2
     select
+    dig 2
     intc_0 // 0
-    swap
+    uncover 2
     substring3
     pushbytes 0x02
     concat
-    // projects/smart_contracts/escrow_vault/contract.py:135
+    pushint 81
+    dig 2
+    >=
+    pushint 81
+    dig 3
+    uncover 2
+    select
+    uncover 3
+    swap
+    uncover 3
+    substring3
+    concat
+    // projects/smart_contracts/escrow_vault/contract.py:125
     // op.Box.put(box_key, updated)
     box_put
-    // projects/smart_contracts/escrow_vault/contract.py:104
+    // projects/smart_contracts/escrow_vault/contract.py:90
     // @abimethod
-    bytec_1 // 0x151f7c7580
+    bytec_0 // 0x151f7c7580
+    log
+    intc_1 // 1
+    return
+
+
+// escrow_vault.contract.EscrowVault.slash_collateral[routing]() -> void:
+slash_collateral:
+    // projects/smart_contracts/escrow_vault/contract.py:129
+    // @abimethod
+    txna ApplicationArgs 1
+    dup
+    intc_0 // 0
+    extract_uint16 // on error: invalid array length header
+    intc_3 // 2
+    +
+    dig 1
+    len
+    ==
+    assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
+    txna ApplicationArgs 2
+    dup
+    len
+    pushint 32
+    ==
+    assert // invalid number of bytes for arc4.static_array<arc4.uint8, 32>
+    // projects/smart_contracts/escrow_vault/contract.py:132
+    // assert Txn.sender == self.admin.value, "Only admin"
+    txn Sender
+    intc_0 // 0
+    bytec_1 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin
+    // projects/smart_contracts/escrow_vault/contract.py:134
+    // box_key = task_id.native.bytes
+    swap
+    extract 2 0
+    // projects/smart_contracts/escrow_vault/contract.py:135
+    // data, _exists = op.Box.get(box_key)
+    dup
+    box_get
+    pop
+    // projects/smart_contracts/escrow_vault/contract.py:137
+    // client = Account(op.extract(data, 0, 32))
+    dup
+    extract 0 32
+    // projects/smart_contracts/escrow_vault/contract.py:138
+    // bounty = op.btoi(op.extract(data, 64, 8))
+    dig 1
+    pushint 64
+    extract_uint64
+    // projects/smart_contracts/escrow_vault/contract.py:139
+    // collateral = op.btoi(op.extract(data, 72, 8))
+    dig 2
+    pushint 72
+    extract_uint64
+    // projects/smart_contracts/escrow_vault/contract.py:142
+    // assert op.btoi(status) <= UInt64(1), "Already settled"
+    dig 3
+    intc_2 // 80
+    getbyte
+    intc_1 // 1
+    <=
+    assert // Already settled
+    // projects/smart_contracts/escrow_vault/contract.py:144-148
+    // # 1. Return Bounty to client (Full refund)
+    // itxn.Payment(
+    //     receiver=client,
+    //     amount=bounty,
+    // ).submit()
+    itxn_begin
+    swap
+    itxn_field Amount
+    swap
+    itxn_field Receiver
+    // projects/smart_contracts/escrow_vault/contract.py:144-145
+    // # 1. Return Bounty to client (Full refund)
+    // itxn.Payment(
+    intc_1 // pay
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    // projects/smart_contracts/escrow_vault/contract.py:144-148
+    // # 1. Return Bounty to client (Full refund)
+    // itxn.Payment(
+    //     receiver=client,
+    //     amount=bounty,
+    // ).submit()
+    itxn_submit
+    // projects/smart_contracts/escrow_vault/contract.py:150-154
+    // # 2. Send Slashed Collateral to Treasury (Platform Owner)
+    // itxn.Payment(
+    //     receiver=treasury.native,
+    //     amount=collateral,
+    // ).submit()
+    itxn_begin
+    itxn_field Amount
+    uncover 2
+    itxn_field Receiver
+    // projects/smart_contracts/escrow_vault/contract.py:150-151
+    // # 2. Send Slashed Collateral to Treasury (Platform Owner)
+    // itxn.Payment(
+    intc_1 // pay
+    itxn_field TypeEnum
+    intc_0 // 0
+    itxn_field Fee
+    // projects/smart_contracts/escrow_vault/contract.py:150-154
+    // # 2. Send Slashed Collateral to Treasury (Platform Owner)
+    // itxn.Payment(
+    //     receiver=treasury.native,
+    //     amount=collateral,
+    // ).submit()
+    itxn_submit
+    // projects/smart_contracts/escrow_vault/contract.py:156-157
+    // # Update status to 3 (SLASHED)
+    // updated = data[:80] + Bytes(b"\x03") + data[81:]
+    dup
+    len
+    intc_2 // 80
+    dig 1
+    >=
+    intc_2 // 80
+    dig 2
+    uncover 2
+    select
+    dig 2
+    intc_0 // 0
+    uncover 2
+    substring3
+    pushbytes 0x03
+    concat
+    pushint 81
+    dig 2
+    >=
+    pushint 81
+    dig 3
+    uncover 2
+    select
+    uncover 3
+    swap
+    uncover 3
+    substring3
+    concat
+    // projects/smart_contracts/escrow_vault/contract.py:158
+    // op.Box.put(box_key, updated)
+    box_put
+    // projects/smart_contracts/escrow_vault/contract.py:129
+    // @abimethod
+    bytec_0 // 0x151f7c7580
     log
     intc_1 // 1
     return
@@ -555,7 +662,7 @@ slash_collateral:
 
 // escrow_vault.contract.EscrowVault.get_task[routing]() -> void:
 get_task:
-    // projects/smart_contracts/escrow_vault/contract.py:139
+    // projects/smart_contracts/escrow_vault/contract.py:162
     // @abimethod(readonly=True)
     txna ApplicationArgs 1
     dup
@@ -567,14 +674,14 @@ get_task:
     len
     ==
     assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>
-    // projects/smart_contracts/escrow_vault/contract.py:142
+    // projects/smart_contracts/escrow_vault/contract.py:165
     // box_key = task_id.native.bytes
     extract 2 0
-    // projects/smart_contracts/escrow_vault/contract.py:143
+    // projects/smart_contracts/escrow_vault/contract.py:166
     // data, _exists = op.Box.get(box_key)
     box_get
     pop
-    // projects/smart_contracts/escrow_vault/contract.py:139
+    // projects/smart_contracts/escrow_vault/contract.py:162
     // @abimethod(readonly=True)
     dup
     len

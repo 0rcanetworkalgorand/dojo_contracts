@@ -12,7 +12,6 @@ interface DeploymentResult {
     publicKey: Uint8Array;
   };
   timestamp: string;
-  usdcAssetId: number;
   contracts: {
     [key: string]: number;
   };
@@ -76,9 +75,6 @@ async function main() {
     throw error;
   }
 
-  // USDC Asset ID
-  const usdcAssetId = parseInt(process.env.USDC_ASSET_ID || '10458941');
-
   // Contract configurations
   const contracts: ContractConfig[] = [
     {
@@ -94,7 +90,7 @@ async function main() {
     },
     {
       name: 'EscrowVault',
-      description: 'Per-task escrow with USDC support',
+      description: 'Per-task escrow with ALGO support',
       approvalPath: 'projects/smart_contracts/escrow_vault/artifacts/EscrowVault.approval.teal',
       clearPath: 'projects/smart_contracts/escrow_vault/artifacts/EscrowVault.clear.teal',
       globalInts: 2,
@@ -103,7 +99,6 @@ async function main() {
       localBytes: 0,
       createArgs: [
         { type: 'address', value: account.addr },
-        { type: 'asset', value: usdcAssetId },
       ],
     },
     {
@@ -117,13 +112,12 @@ async function main() {
       localBytes: 0,
       createArgs: [
         { type: 'address', value: account.addr },
-        { type: 'asset', value: usdcAssetId },
         { type: 'address', value: account.addr },
-      ], // admin, usdc, treasury
+      ], // admin, treasury
     },
     {
       name: 'PayoutSplitter',
-      description: 'Multi-recipient USDC distribution',
+      description: 'Multi-recipient ALGO distribution',
       approvalPath: 'projects/smart_contracts/payout_splitter/artifacts/PayoutSplitter.approval.teal',
       clearPath: 'projects/smart_contracts/payout_splitter/artifacts/PayoutSplitter.clear.teal',
       globalInts: 2,
@@ -132,7 +126,6 @@ async function main() {
       localBytes: 0,
       createArgs: [
         { type: 'address', value: account.addr },
-        { type: 'asset', value: usdcAssetId },
       ],
     },
   ];
@@ -143,7 +136,6 @@ async function main() {
       publicKey: account.sk.slice(32), // Public key is last 32 bytes
     },
     timestamp: new Date().toISOString(),
-    usdcAssetId,
     contracts: {},
   };
 
