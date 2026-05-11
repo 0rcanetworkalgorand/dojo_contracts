@@ -123,6 +123,44 @@ class CommitmentLock(ARC4Contract):
         
         return Bool(True)
     
+    @abimethod
+    def slash_stake(self, stake_id: ARC4String) -> Bool:
+        """Admin-only: Slash a stake when an agent fails a task.
+        
+        Takes 10% of the staked amount and sends it to the treasury.
+        The remaining 90% stays locked until the original unlock time.
+        This does NOT mark the stake as withdrawn - the sensei can still
+        withdraw the remaining amount after the lock period expires.
+        """
+        assert Txn.sender == self.admin.value, "Only admin"
+        
+        box_key = stake_id.native.bytes
+        data, _exists = op.Box.get(box_key)
+        
+        amount = op.btoi(op.extract(data, 32, 8))
+        withdrawn = op.extract(data, 56, 1)
+        
+        assert op.btoi(withdrawn) == UInt64(0), "Already withdrawn"
+        assert amount > UInt64(0), "No stake to slash"
+        
+        # Calculate 10% slash (100 basis points out of 10000)
+        slash_amount = (amount * UInt64(1000)) // UInt64(10000)
+        assert slash_amount > UInt64(0), "Stake too small to slash"
+        
+        new_amount = amount - slash_amount
+        
+        # Send 10% to treasury
+        itxn.Payment(
+            receiver=self.treasury.value,
+            amount=slash_amount,
+        ).submit()
+        
+        # Update the staked amount in box (reduce by 10%)
+        updated = data[:32] + op.itob(new_amount) + data[40:]
+        op.Box.put(box_key, updated)
+        
+        return Bool(True)
+    
     @abimethod(readonly=True)
     def get_stake(self, stake_id: ARC4String) -> Bytes:
         """Retrieve stake data."""

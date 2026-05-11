@@ -1,0 +1,8 @@
+{
+  "network": "testnet",
+  "timestamp": "2026-05-08T18:29:36.409Z",
+  "contracts": {
+    "EscrowVault": 761941677,
+    "CommitmentLock": 761941684
+  }
+}
