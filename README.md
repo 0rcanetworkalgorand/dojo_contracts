@@ -1,6 +1,6 @@
 # 0rca Swarm Dojo - Smart Contracts
 
-Algorand smart contracts for the decentralized AI agent marketplace where Senseis stake and list Worker Agents, and Clients post bounties in USDC.
+Algorand smart contracts for the decentralized AI agent marketplace where Senseis stake and list Worker Agents, and Clients post ALGO bounties with on-chain settlement.
 
 ## Contracts
 
@@ -13,40 +13,43 @@ Master agent identity store tracking:
 - Listing expiry timestamps
 
 **Key Methods:**
-- `register_agent()` - Register new agent with lane and config
-- `update_status()` - Toggle agent active/inactive
-- `increment_tasks()` - Update task completion count
-- `set_expiry()` - Set listing expiration
-- `get_agent()` - Retrieve agent data
+- `register_agent()` - Register new agent with lane and config (admin or sensei)
+- `list_agent()` - List agent in marketplace with expiry (sensei or admin)
+- `delist_agent()` - Remove agent from marketplace
+- `increment_tasks()` - Update task completion count (admin)
+- `increment_tasks_failed()` - Update failed task count (admin)
+- `get_agent()` - Retrieve full agent record
 
 ### EscrowVault
 Per-task financial lifecycle using Box Storage keyed by task_id:
-- Client locks USDC bounty
-- Worker locks collateral
-- Verification Service triggers release or slashing
+- Client locks ALGO bounty
+- Worker submits provenance hash (required before settlement)
+- Client or admin triggers release or slashing
 
 **Key Methods:**
-- `lock_bounty()` - Client deposits bounty
-- `lock_collateral()` - Worker deposits collateral
-- `release_payment()` - Admin releases on completion
-- `slash_collateral()` - Admin slashes on failure
+- `lock_bounty()` - Client deposits ALGO bounty
+- `submit_task()` - Worker submits kite_hash provenance proof
+- `release_payment()` - Client or admin releases on completion (98% sensei, 2% treasury)
+- `slash_bounty()` - Client or admin refunds 100% to client on failure
 - `get_task()` - Retrieve task escrow data
 
 ### CommitmentLock
 Reputation Shield - time-locked stakes:
-- Sensei stakes USDC when listing (30/60/90 days)
-- Clean exit returns full stake
+- Sensei stakes ALGO when listing (30/60/90 days)
+- Clean exit returns full stake after lock expires
 - Early withdrawal triggers pro-rated penalty to treasury
+- Admin can slash 10% on agent failure
 
 **Key Methods:**
-- `stake()` - Lock USDC for commitment period
+- `stake()` - Lock ALGO for commitment period
 - `withdraw()` - Clean withdrawal after lock
-- `early_withdraw()` - Withdraw with penalty
-- `calculate_penalty()` - View current penalty
+- `release_commitment()` - Early withdraw with penalty
+- `slash_stake()` - Admin slashes 10% to treasury
+- `calculate_penalty()` - View current early-withdrawal penalty
 - `get_stake()` - Retrieve stake data
 
 ### PayoutSplitter
-Multi-wallet USDC distribution via Atomic Transfer groups:
+Multi-wallet ALGO distribution via Atomic Transfer groups:
 - Split by specific amounts
 - Split equally
 - Split by percentage (basis points)
@@ -54,26 +57,30 @@ Multi-wallet USDC distribution via Atomic Transfer groups:
 **Key Methods:**
 - `split_payment()` - Custom amounts per recipient
 - `split_equal()` - Equal distribution
-- `split_percentage()` - Percentage-based split
+- `split_percentage()` - Percentage-based split (must sum to 10000)
 - `get_total_splits()` - Total splits executed
 
 ## Architecture Decisions
 
 ### No Native Slashing
 Algorand has no native slashing mechanism. All penalty logic is implemented inside contract methods:
-- **EscrowVault**: Per-task collateral slashing
-- **CommitmentLock**: Listing stake penalties
+- **EscrowVault**: Per-task bounty refund on failure
+- **CommitmentLock**: Listing stake penalties (10% to treasury)
 
-### Admin-Signed Settlement
-Settlement is triggered by admin-signed ApplicationCall from the off-chain Verification Service (not Chainlink - Algorand not supported). Admin address is set at deploy time and stored in Global State.
+### Client-Signed Settlement
+Settlement can be triggered directly by the client from their wallet (Pera/Defly), enabling trustless on-chain resolution without admin involvement. The admin pathway remains as a convenience for automated backend flows. Both `release_payment` and `slash_bounty` accept either the client or admin as sender.
 
-### USDC as Native ASA
-USDC is an Algorand Standard Asset:
-- **MainNet**: ASA ID 31566704
-- **TestNet**: Use `USDC_ASA_ID` environment variable
+### Provenance-Gated Payment
+`release_payment` requires task status = SUBMITTED with a non-zero kite_hash. This ensures:
+1. The worker provably submitted work (`submit_task` was called)
+2. A provenance hash is recorded on-chain before funds can flow
+3. Payment cannot be released for tasks that were never worked on
+
+### ALGO-Native (TestNet)
+All escrow and staking operations use native ALGO (`itxn.Payment`). ASA/USDC support is a planned upgrade — the contract architecture supports it since `itxn.AssetTransfer` is a drop-in replacement.
 
 ### Atomic Transaction Groups
-All financial operations are grouped into Atomic Transaction Groups. Isolated USDC transfers are a design error.
+All financial operations are grouped into Atomic Transaction Groups for atomicity.
 
 ## Development
 
@@ -94,19 +101,9 @@ pip install -r requirements.txt
 
 ### Setup (Unix/Linux/macOS)
 ```bash
-# Create virtual environment
 python -m venv venv
-
-# Activate virtual environment
 source venv/bin/activate
-
-# Install dependencies
 pip install -r requirements.txt
-```
-
-### Start LocalNet
-```bash
-algokit localnet start
 ```
 
 ### Build Contracts
@@ -123,14 +120,14 @@ algokit generate client projects/smart_contracts/payout_splitter/contract.py --o
 
 ### Test
 ```bash
-# Run all tests
+# Run all tests (35 tests)
 pytest
 
 # Run specific contract tests
-pytest tests/test_dojo_registry.py
-pytest tests/test_escrow_vault.py
-pytest tests/test_commitment_lock.py
-pytest tests/test_payout_splitter.py
+pytest tests/test_escrow_vault.py     # 14 tests
+pytest tests/test_commitment_lock.py  # 9 tests
+pytest tests/test_dojo_registry.py    # 8 tests
+pytest tests/test_payout_splitter.py  # 4 tests
 
 # With coverage
 pytest --cov
@@ -140,36 +137,33 @@ pytest --cov
 
 Contracts use Box Storage for per-entity data:
 
-**DojoRegistry**: `agent_id` → agent data (89 bytes)
-**EscrowVault**: `task_id` → escrow data (81 bytes)
-**CommitmentLock**: `stake_id` → stake data (57 bytes)
-
-## Dependencies
-
-This repo has no dependencies on:
-- dojo-backend
-- dojo-agents
-- dojo-frontend
-
-Typed client artifacts are consumed by dojo-backend.
+| Contract | Key | Size | Format |
+|----------|-----|------|--------|
+| **DojoRegistry** | `agent_id` | 97 bytes | sensei(32) + lane(8) + status(1) + config_hash(32) + tasks(8) + failed(8) + expiry(8) |
+| **EscrowVault** | `task_id` | 137 bytes | client(32) + worker(32) + sensei(32) + bounty(8) + status(1) + kite_hash(32) |
+| **CommitmentLock** | `stake_id` | 57 bytes | sensei(32) + amount(8) + lock_days(8) + unlock_time(8) + withdrawn(1) |
 
 ## Testing Strategy
 
 Each contract has comprehensive tests covering:
-- ✅ Success paths
-- ❌ Authorization failures
-- ❌ Invalid state transitions
-- ❌ Amount mismatches
-- ❌ Duplicate operations
-- ❌ Edge cases
+- ✅ Success paths (happy path for all core methods)
+- ✅ Client-signed settlement (trustless on-chain release)
+- ✅ Admin-signed settlement (convenience pathway)
+- ❌ Authorization failures (unauthorized sender blocked)
+- ❌ Invalid state transitions (wrong status blocked)
+- ❌ Duplicate operations (double-lock, double-slash blocked)
+- ❌ Edge cases (invalid lock periods, already withdrawn)
 
 ## Deployment
 
-Contracts are deployed to AlgoKit LocalNet for development. Production deployment to TestNet/MainNet requires:
-1. Admin address configuration
-2. USDC ASA ID (31566704 for MainNet)
-3. Treasury address (for CommitmentLock)
-4. Box storage MBR funding
+Contracts are deployed to Algorand TestNet:
+
+| Contract | App ID |
+|----------|--------|
+| DojoRegistry | 758815322 |
+| EscrowVault | 761941677 |
+| CommitmentLock | 761941684 |
+| PayoutSplitter | 758815334 |
 
 ## Project Structure
 ```
@@ -189,10 +183,10 @@ dojo-contracts/
 │           ├── contract.py
 │           └── __init__.py
 ├── tests/
-│   ├── test_dojo_registry.py
-│   ├── test_escrow_vault.py
-│   ├── test_commitment_lock.py
-│   └── test_payout_splitter.py
+│   ├── test_dojo_registry.py    (8 tests)
+│   ├── test_escrow_vault.py     (14 tests)
+│   ├── test_commitment_lock.py  (9 tests)
+│   └── test_payout_splitter.py  (4 tests)
 ├── requirements.txt
 ├── setup.bat
 ├── .algokit.toml

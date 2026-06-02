@@ -1,4 +1,4 @@
-from algopy import ARC4Contract, GlobalState, UInt64, Bytes, Txn, gtxn, Asset, itxn, Global, Account, op, urange
+from algopy import ARC4Contract, GlobalState, UInt64, Bytes, Txn, gtxn, itxn, Global, Account, op, urange
 from algopy.arc4 import abimethod, Address, Bool, UInt64 as ARC4UInt64, String as ARC4String
 
 
@@ -82,21 +82,31 @@ class EscrowVault(ARC4Contract):
     
     @abimethod
     def release_payment(self, task_id: ARC4String, treasury: Address) -> Bool:
-        """Admin releases bounty on validated completion.
+        """Client or admin releases bounty on validated completion.
         
         Distribution: 2% platform fee to treasury, 98% to sensei (developer) directly.
-        """
-        assert Txn.sender == self.admin.value, "Only admin"
+        Requires task to be in SUBMITTED state (status=1), ensuring submit_task was
+        called with a valid kite_hash provenance proof before payment can release.
         
+        The client who funded the escrow can sign this directly from their wallet,
+        enabling trustless on-chain settlement without admin involvement.
+        Admin retains the ability to settle as a convenience for automated flows.
+        """
         box_key = task_id.native.bytes
         data, _exists = op.Box.get(box_key)
         
+        client = Account(op.extract(data, 0, 32))
         sensei = Account(op.extract(data, 64, 32))
         bounty = op.btoi(op.extract(data, 96, 8))
         status = op.extract(data, 104, 1)
+        kite_hash = op.extract(data, 105, 32)
         
-        # Can be settled from locked (0) or submitted (1)
-        assert op.btoi(status) <= UInt64(1), "Already settled or slashed"
+        # Client OR admin can release payment — client-signed is the trustless path
+        assert Txn.sender == client or Txn.sender == self.admin.value, "Only client or admin"
+        
+        # Task must be SUBMITTED (status=1) with a valid kite_hash before payment release
+        assert op.btoi(status) == UInt64(1), "Task must be submitted with provenance hash"
+        assert kite_hash != op.bzero(32), "Provenance hash not set"
         
         # Calculate 2% platform fee
         fee = (bounty * UInt64(200)) // UInt64(10000)
@@ -122,13 +132,13 @@ class EscrowVault(ARC4Contract):
     
     @abimethod
     def slash_bounty(self, task_id: ARC4String) -> Bool:
-        """Admin slashes on task failure - returns 100% bounty to client (user).
+        """Client or admin slashes on task failure - returns 100% bounty to client (user).
         
-        No platform fee on the bounty side. The 1% developer slash is handled
+        The client can trigger their own refund directly on-chain, or the admin
+        can do it on behalf of the client via the backend API.
+        No platform fee on the bounty side. The developer stake slash is handled
         separately by the CommitmentLock contract.
         """
-        assert Txn.sender == self.admin.value, "Only admin"
-        
         box_key = task_id.native.bytes
         data, _exists = op.Box.get(box_key)
         
@@ -136,6 +146,8 @@ class EscrowVault(ARC4Contract):
         bounty = op.btoi(op.extract(data, 96, 8))
         status = op.extract(data, 104, 1)
         
+        # Client OR admin can slash — client-signed enables trustless refund
+        assert Txn.sender == client or Txn.sender == self.admin.value, "Only client or admin"
         assert op.btoi(status) <= UInt64(1), "Already settled"
         
         # Return 100% bounty to client (user) - no deductions

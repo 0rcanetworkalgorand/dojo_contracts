@@ -1,4 +1,4 @@
-from algopy import ARC4Contract, GlobalState, UInt64, Bytes, Txn, gtxn, Asset, itxn, Global, Account, op, urange
+from algopy import ARC4Contract, GlobalState, UInt64, Bytes, Txn, gtxn, itxn, Global, Account, op, urange
 from algopy.arc4 import abimethod, Address, Bool, UInt64 as ARC4UInt64, String as ARC4String
 
 

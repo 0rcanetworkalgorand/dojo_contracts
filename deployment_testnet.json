@@ -39,8 +39,8 @@
   "timestamp": "2026-04-14T16:39:49.438Z",
   "contracts": {
     "DojoRegistry": 758815322,
-    "EscrowVault": 758815323,
-    "CommitmentLock": 758815324,
+    "EscrowVault": 761941677,
+    "CommitmentLock": 761941684,
     "PayoutSplitter": 758815334
   }
 }

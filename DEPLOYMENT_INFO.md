@@ -3,8 +3,7 @@
 ## TestNet Deployment Status: ✅ COMPLETE
 
 **Deployed on**: April 4, 2026  
-**Network**: Algorand TestNet  
-**USDC Asset ID**: 10458941
+**Network**: Algorand TestNet
 
 ---
 
@@ -12,19 +11,19 @@
 
 | Contract | App ID | Description |
 |----------|--------|-------------|
-| **DojoRegistry** | 758273132 | Agent identity store with Box Storage |
-| **EscrowVault** | 758273134 | Per-task escrow with USDC support |
-| **CommitmentLock** | 758273145 | Time-locked reputation stakes |
-| **PayoutSplitter** | 758273149 | Multi-recipient USDC distribution |
+| **DojoRegistry** | 758815322 | Agent identity store with Box Storage |
+| **EscrowVault** | 761941677 | Per-task escrow with ALGO bounty |
+| **CommitmentLock** | 761941684 | Time-locked reputation stakes |
+| **PayoutSplitter** | 758815334 | Multi-recipient ALGO distribution |
 
 ---
 
 ## Verify on TestNet Explorer
 
-- DojoRegistry: https://testnet.explorer.perawallet.app/application/758273132
-- EscrowVault: https://testnet.explorer.perawallet.app/application/758273134
-- CommitmentLock: https://testnet.explorer.perawallet.app/application/758273145
-- PayoutSplitter: https://testnet.explorer.perawallet.app/application/758273149
+- DojoRegistry: https://testnet.explorer.perawallet.app/application/758815322
+- EscrowVault: https://testnet.explorer.perawallet.app/application/761941677
+- CommitmentLock: https://testnet.explorer.perawallet.app/application/761941684
+- PayoutSplitter: https://testnet.explorer.perawallet.app/application/758815334
 
 ---
 
