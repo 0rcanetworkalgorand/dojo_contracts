@@ -2,7 +2,9 @@
   "network": "testnet",
   "timestamp": "2026-05-08T18:29:36.409Z",
   "contracts": {
+    "DojoRegistry": 758815322,
     "EscrowVault": 761941677,
-    "CommitmentLock": 761941684
+    "CommitmentLock": 761941684,
+    "PayoutSplitter": 758815334
   }
 }
