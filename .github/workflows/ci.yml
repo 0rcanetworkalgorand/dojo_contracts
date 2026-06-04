@@ -1,0 +1,80 @@
+name: Contracts CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-properties:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install hypothesis pytest pytest-timeout
+
+      - name: Run escrow vault tests
+        run: python -m pytest tests/test_escrow_vault.py -v --timeout=60
+
+      - name: Run escrow property-based tests
+        run: python -m pytest tests/test_escrow_properties.py -v --timeout=120
+
+      - name: Run escrow economic tests
+        run: python -m pytest tests/test_escrow_economic.py -v --timeout=60
+
+      - name: Run registry tests
+        run: python -m pytest tests/test_dojo_registry.py -v --timeout=60
+
+      - name: Run commitment lock tests
+        run: python -m pytest tests/test_commitment_lock.py -v --timeout=60
+
+      - name: Run payout splitter tests
+        run: python -m pytest tests/test_payout_splitter.py -v --timeout=60
+
+  verify-artifacts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify ARC-56 typed clients exist
+        run: |
+          ls artifacts/DojoRegistryClient.ts
+          ls artifacts/EscrowVaultClient.ts
+          ls artifacts/CommitmentLockClient.ts
+          ls artifacts/PayoutSplitterClient.ts
+          echo "✅ All ARC-56 typed clients present"
+
+      - name: Verify deployment info
+        run: |
+          ls DEPLOYMENT_INFO.md
+          ls deployment_testnet.json
+          echo "✅ Deployment artifacts verified"
+
+      - name: Validate contract syntax
+        run: |
+          python -c "
+          import ast
+          import os
+          contracts_dir = 'projects/smart_contracts'
+          for root, dirs, files in os.walk(contracts_dir):
+              for f in files:
+                  if f.endswith('.py'):
+                      path = os.path.join(root, f)
+                      ast.parse(open(path).read())
+                      print(f'✅ {path}')
+          "
